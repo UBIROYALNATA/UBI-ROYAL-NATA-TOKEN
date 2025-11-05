@@ -29,7 +29,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'UBI_ROYAL_NATA_SITE/site'
+          path: 'UBI ROYAL NATA/UBI_ROYAL_NATA_SITE/site'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
