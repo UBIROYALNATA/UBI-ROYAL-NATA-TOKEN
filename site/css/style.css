@@ -1,4 +1,4 @@
-/* Temel yapı */
+/* Genel yapı */
 * {
   margin: 0;
   padding: 0;
@@ -46,7 +46,6 @@ nav a {
   color: #d4af37;
   text-decoration: none;
   font-weight: 500;
-  transition: 0.3s;
 }
 
 nav a:hover {
@@ -61,7 +60,6 @@ nav a:hover {
   padding: 4px 8px;
   cursor: pointer;
   border-radius: 3px;
-  transition: 0.3s;
 }
 
 .lang-select button:hover {
@@ -69,36 +67,57 @@ nav a:hover {
   color: #000;
 }
 
-/* HERO Bölümü */
+/* HERO */
 #hero {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  text-align: left;
-  padding: 0 100px;
+  padding-top: 80px;
 }
 
+.hero-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+/* Sikke (sol kısım) */
+.coin-container {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coin {
+  width: 300px;
+  height: auto;
+  animation: spin 15s linear infinite;
+  filter: drop-shadow(0 0 20px rgba(212,175,55,0.6));
+}
+
+@keyframes spin {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+}
+
+/* Yazı alanı */
 .hero-content {
   max-width: 600px;
-  margin-left: 400px; /* coin'in sağında ortalamak için */
+  text-align: left;
 }
 
 #hero h1 {
   font-size: 3rem;
-  letter-spacing: 2px;
-  animation: fadeInDown 1s ease;
+  margin-bottom: 15px;
 }
 
 #hero p {
   font-size: 1.2rem;
-  margin-top: 15px;
-  animation: fadeIn 1.5s ease;
-}
-
-.hero-buttons {
-  margin-top: 25px;
+  margin-bottom: 25px;
+  color: #f5d878;
 }
 
 .hero-buttons button {
@@ -106,7 +125,7 @@ nav a:hover {
   color: #000;
   border: none;
   padding: 12px 24px;
-  margin: 10px;
+  margin-right: 10px;
   border-radius: 5px;
   font-weight: 600;
   cursor: pointer;
@@ -117,90 +136,23 @@ nav a:hover {
   background: #fff;
 }
 
-/* Dönen Coin */
-.coin {
-  position: absolute;
-  left: 8%;
-  top: 50%;
-  transform: translateY(-50%) rotateY(0deg);
-  width: 320px;
-  height: auto;
-  animation: spin 14s linear infinite;
-  filter: drop-shadow(0 0 20px rgba(212,175,55,0.6));
-}
-
-@keyframes spin {
-  from { transform: translateY(-50%) rotateY(0deg); }
-  to { transform: translateY(-50%) rotateY(360deg); }
-}
-
-/* Genel Bölümler */
+/* Alt bölümler */
 section {
   padding: 100px 20px;
-  max-width: 900px;
-  margin: auto;
   text-align: center;
-  animation: fadeInUp 1s ease;
 }
 
 h2 {
+  color: #f2c94c;
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #f2c94c;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  margin: 10px 0;
-  font-size: 1.1rem;
-}
-
-/* Roadmap */
-.timeline {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.phase {
-  background: rgba(255, 215, 0, 0.05);
-  border: 1px solid rgba(212, 175, 55, 0.4);
-  margin: 10px;
-  padding: 20px;
-  border-radius: 8px;
-  width: 200px;
-  transition: 0.3s;
-}
-
-.phase:hover {
-  background: rgba(212, 175, 55, 0.15);
-  transform: scale(1.05);
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 40px;
-  border-top: 1px solid rgba(212, 175, 55, 0.3);
+  border-top: 1px solid rgba(212,175,55,0.3);
   font-size: 0.9rem;
-}
-
-/* Animasyonlar */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-30px); }
-  to { opacity: 1; transform: translateY(0); }
+  color: #b8972a;
 }
