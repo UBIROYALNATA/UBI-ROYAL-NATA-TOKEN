@@ -1,84 +1,203 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UBI ROYAL NATA — URN Token</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <script defer src="js/lang.js"></script>
-</head>
-<body>
-  <!-- Arka plan -->
-  <canvas id="bg"></canvas>
+/* Genel Stil */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <!-- Üst Menü -->
-  <header>
-    <img src="images/UBI-ROYAL-NATA-logo.png" alt="UBI ROYAL NATA" class="logo">
-    <nav>
-      <a href="#about" data-translate="nav_about">Hakkında</a>
-      <a href="#tokenomics" data-translate="nav_tokenomics">Tokenomik</a>
-      <a href="#roadmap" data-translate="nav_roadmap">Yol Haritası</a>
-      <a href="#whitepaper" data-translate="nav_whitepaper">Whitepaper</a>
-      <a href="#contact" data-translate="nav_contact">İletişim</a>
-    </nav>
-    <div class="lang-select">
-      <button data-lang="tr">TR</button>
-      <button data-lang="en">EN</button>
-    </div>
-  </header>
+body {
+  font-family: "Poppins", sans-serif;
+  background: #000;
+  color: #d4af37;
+  overflow-x: hidden;
+}
 
-  <!-- HERO Bölümü -->
-  <section id="hero">
-    <img src="images/URN-coin.png" alt="URN Coin" class="coin" />
-    <div class="hero-content">
-      <h1>UBI ROYAL NATA — URN Token</h1>
-      <p>Merkezi olmayan değerlerle özgürlük, refah ve eşitlik.</p>
-      <div class="hero-buttons">
-        <button class="buy-btn">Satın Al / Takas</button>
-        <button class="whitepaper-btn">Beyaz Bülten</button>
-      </div>
-    </div>
-  </section>
+/* Arka plan (canvas) */
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
+}
 
-  <!-- Hakkında -->
-  <section id="about">
-    <h2>UBI ROYAL NATA Hakkında</h2>
-    <p>
-      URN Token, Asya, Orta Doğu ve Afrika’yı tek bir finansal ekosistem altında birleştiren merkeziyetsiz bir projedir.
-      Dijital özgürlük, kimlik ve finansal kapsayıcılık için tasarlanmıştır.
-    </p>
-  </section>
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  z-index: 10;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}
 
-  <!-- Tokenomik -->
-  <section id="tokenomics">
-    <h2>Token Ekonomisi</h2>
-    <ul>
-      <li>Toplam Arz: 1.000.000.000 URN</li>
-      <li>Likidite Kilitli: 2 Yıl</li>
-      <li>Vergi: %0</li>
-      <li>Sözleşme Adresi: 0x1234...ABCD</li>
-    </ul>
-  </section>
+header .logo {
+  height: 40px;
+}
 
-  <!-- Yol Haritası -->
-  <section id="roadmap">
-    <h2>Yol Haritası</h2>
-    <div class="timeline">
-      <div class="phase">2025 Q1 — Başlangıç & Geliştirme</div>
-      <div class="phase">2025 Q2 — Token Lansmanı</div>
-      <div class="phase">2025 Q3 — Topluluk Genişlemesi</div>
-      <div class="phase">2025 Q4 — Ekosistem Entegrasyonları</div>
-    </div>
-  </section>
+nav a {
+  margin: 0 12px;
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
 
-  <!-- İletişim -->
-  <section id="contact">
-    <h2>İletişim</h2>
-    <p>Bize ulaşın: info@ubiroyalnata.com</p>
-  </section>
+nav a:hover {
+  color: #fff;
+}
 
-  <footer>
-    © 2025 UBI ROYAL NATA — Tüm Hakları Saklıdır.
-  </footer>
-</body>
-</html>
+.lang-select button {
+  background: transparent;
+  border: 1px solid #d4af37;
+  color: #d4af37;
+  margin-left: 6px;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.lang-select button:hover {
+  background: #d4af37;
+  color: #000;
+}
+
+/* HERO Bölümü */
+#hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+#hero h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  animation: fadeInDown 1s ease;
+}
+
+#hero p {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  animation: fadeIn 1.5s ease;
+}
+
+.hero-buttons {
+  margin-top: 25px;
+}
+
+.hero-buttons button {
+  background: #d4af37;
+  color: #000;
+  border: none;
+  padding: 12px 24px;
+  margin: 10px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-buttons button:hover {
+  background: #fff;
+}
+
+/* Dönen Coin */
+.coin {
+  position: absolute;
+  left: 8%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 280px;
+  height: auto;
+  animation: spin 14s linear infinite;
+  filter: drop-shadow(0 0 15px rgba(212,175,55,0.4));
+}
+
+@keyframes spin {
+  from { transform: translateY(-50%) rotateY(0deg); }
+  to { transform: translateY(-50%) rotateY(360deg); }
+}
+
+/* Bölümler */
+section {
+  padding: 100px 20px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  animation: fadeInUp 1s ease;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #f2c94c;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+/* Roadmap */
+.timeline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.phase {
+  background: rgba(255, 215, 0, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  margin: 10px;
+  padding: 20px;
+  border-radius: 8px;
+  width: 200px;
+  transition: 0.3s;
+}
+
+.phase:hover {
+  background: rgba(212, 175, 55, 0.15);
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 40px;
+  border-top: 1px solid rgba(212, 175, 55, 0.3);
+  font-size: 0.9rem;
+}
+
+/* Animasyonlar */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
