@@ -1,9 +1,4 @@
-/* ==============================
-   UBI ROYAL NATA — URN Token
-   Ana Stil Dosyası
-   ============================== */
-
-/* Temel yapı */
+/* Genel Stil */
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +12,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Arka plan animasyonu (canvas) */
+/* Arka plan (canvas) */
 #bg {
   position: fixed;
   top: 0;
@@ -40,32 +35,10 @@ header {
   padding: 15px 50px;
   z-index: 10;
   border-bottom: 1px solid rgba(212, 175, 55, 0.3);
-  backdrop-filter: blur(8px);
-  animation: fadeInDown 1s ease;
 }
 
-/* Logo */
-.logo {
-  height: 80px;
-  width: auto;
-  margin: 10px 20px;
-  opacity: 0;
-  transform: scale(0.9);
-  animation: logoFadeIn 1.5s ease forwards;
-  transition: transform 0.4s ease, filter 0.4s ease;
-  filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.3));
-}
-
-.logo:hover {
-  transform: scale(1.08);
-  filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.7));
-}
-
-/* Küçük ekran uyumu */
-@media (max-width: 768px) {
-  .logo {
-    height: 60px;
-  }
+header .logo {
+  height: 40px;
 }
 
 nav a {
@@ -96,15 +69,18 @@ nav a:hover {
   color: #000;
 }
 
-/* Hero Section */
+/* HERO Bölümü */
 #hero {
   height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  position: relative;
   text-align: center;
-  padding: 0 20px;
+}
+
+.hero-content {
+  max-width: 600px;
 }
 
 #hero h1 {
@@ -116,7 +92,6 @@ nav a:hover {
 #hero p {
   font-size: 1.2rem;
   margin-top: 15px;
-  max-width: 600px;
   animation: fadeIn 1.5s ease;
 }
 
@@ -138,7 +113,23 @@ nav a:hover {
 
 .hero-buttons button:hover {
   background: #fff;
-  color: #000;
+}
+
+/* Dönen Coin */
+.coin {
+  position: absolute;
+  left: 8%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 280px;
+  height: auto;
+  animation: spin 14s linear infinite;
+  filter: drop-shadow(0 0 15px rgba(212,175,55,0.4));
+}
+
+@keyframes spin {
+  from { transform: translateY(-50%) rotateY(0deg); }
+  to { transform: translateY(-50%) rotateY(360deg); }
 }
 
 /* Bölümler */
@@ -158,7 +149,6 @@ h2 {
 
 ul {
   list-style: none;
-  padding: 0;
 }
 
 li {
@@ -196,58 +186,6 @@ footer {
   font-size: 0.9rem;
 }
 
-/* ==============================
-   Dönen Sikke + Işık Efekti
-   ============================== */
-.coin-wrapper {
-  position: fixed;
-  left: 5%;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 5;
-}
-
-.coin {
-  width: 140px;
-  height: 140px;
-  animation: rotateCoin 8s linear infinite;
-  filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.6));
-  transition: transform 0.3s ease;
-}
-
-.coin:hover {
-  transform: scale(1.1);
-}
-
-/* ışık halkası */
-.coin-glow {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 220px;
-  height: 220px;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 215, 0, 0.25) 0%, transparent 70%);
-  animation: glowPulse 4s ease-in-out infinite;
-  filter: blur(20px);
-  z-index: -1;
-}
-
-/* mobil uyum */
-@media (max-width: 768px) {
-  .coin {
-    width: 90px;
-    height: 90px;
-    animation-duration: 12s;
-  }
-
-  .coin-glow {
-    width: 140px;
-    height: 140px;
-  }
-}
-
 /* Animasyonlar */
 @keyframes fadeIn {
   from { opacity: 0; }
@@ -262,39 +200,4 @@ footer {
 @keyframes fadeInDown {
   from { opacity: 0; transform: translateY(-30px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes logoFadeIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes rotateCoin {
-  from {
-    transform: rotateY(0deg);
-  }
-  to {
-    transform: rotateY(360deg);
-  }
-}
-
-@keyframes glowPulse {
-  0% {
-    opacity: 0.4;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  50% {
-    opacity: 0.8;
-    transform: translate(-50%, -50%) scale(1.15);
-  }
-  100% {
-    opacity: 0.4;
-    transform: translate(-50%, -50%) scale(1);
-  }
 }
