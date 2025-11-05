@@ -8,35 +8,80 @@
   <script defer src="js/lang.js"></script>
 </head>
 <body>
-  <header>
-    <img src="assets/logo.png" alt="UBI ROYAL NATA" class="logo" />
+  <header class="navbar">
+    <img src="logo.png" alt="UBI ROYAL NATA" class="logo" />
+    <nav>
+      <a href="#about" data-translate="nav_about">About</a>
+      <a href="#tokenomics" data-translate="nav_tokenomics">Tokenomics</a>
+      <a href="#roadmap" data-translate="nav_roadmap">Roadmap</a>
+      <a href="#whitepaper" data-translate="nav_whitepaper">Whitepaper</a>
+      <a href="#contact" data-translate="nav_contact">Contact</a>
+    </nav>
     <div class="lang-select">
       <button data-lang="en">EN</button>
       <button data-lang="tr">TR</button>
-      <button data-lang="ko">KO</button>
       <button data-lang="ar">AR</button>
       <button data-lang="fr">FR</button>
+      <button data-lang="ko">KO</button>
     </div>
   </header>
-  <main>
-    <section id="hero">
-      <h1 data-translate="hero_title"></h1>
-      <p data-translate="hero_subtitle"></p>
-    </section>
-    <nav>
-      <a href="#about" data-translate="nav_about"></a>
-      <a href="#tokenomics" data-translate="nav_tokenomics"></a>
-      <a href="#roadmap" data-translate="nav_roadmap"></a>
-      <a href="#whitepaper" data-translate="nav_whitepaper"></a>
-      <a href="#contact" data-translate="nav_contact"></a>
-    </nav>
-    <section id="about">
-      <h2 data-translate="about_title"></h2>
-      <p data-translate="about_text"></p>
-    </section>
-  </main>
+
+  <section class="hero">
+    <h1>UBI ROYAL NATA — URN Token</h1>
+    <p>Freedom, prosperity and equality through decentralized value.</p>
+    <div class="cta">
+      <a href="https://pancakeswap.finance" target="_blank" class="btn">Buy / Swap</a>
+      <a href="#whitepaper" class="btn secondary">Whitepaper</a>
+    </div>
+  </section>
+
+  <section id="about" class="content">
+    <h2>About</h2>
+    <p>
+      URN Token connects Asia, the Middle East and Africa under one financial ecosystem.
+      A project built for freedom, identity and financial inclusion.
+    </p>
+  </section>
+
+  <section id="tokenomics" class="content">
+    <h2>Tokenomics</h2>
+    <ul>
+      <li>Total Supply: 1,000,000,000 URN</li>
+      <li>Liquidity Locked: 2 Years</li>
+      <li>Tax: 0%</li>
+      <li>
+        Contract Address:
+        <code id="contract">0x1234...ABCD</code>
+        <button onclick="copyAddress()">Copy</button>
+      </li>
+    </ul>
+  </section>
+
+  <section id="roadmap" class="content">
+    <h2>Roadmap</h2>
+    <p>Q1: Launch — Q2: Exchange Listings — Q3: Wallet Integration — Q4: Governance</p>
+  </section>
+
+  <section id="whitepaper" class="content">
+    <h2>Whitepaper</h2>
+    <p>
+      Read the full document <a href="whitepaper.pdf" target="_blank">here</a>.
+    </p>
+  </section>
+
   <footer>
     <p>© 2025 UBI ROYAL NATA — All Rights Reserved.</p>
+    <div class="social">
+      <a href="#">Twitter</a> | <a href="#">Telegram</a> | <a href="#">BscScan</a>
+    </div>
   </footer>
+
+  <script>
+    function copyAddress() {
+      const addr = document.getElementById("contract").innerText;
+      navigator.clipboard.writeText(addr);
+      alert("Contract address copied!");
+    }
+  </script>
 </body>
 </html>
