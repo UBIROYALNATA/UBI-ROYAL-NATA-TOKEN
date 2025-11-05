@@ -1,40 +1,61 @@
 body {
-  background: #0d0d0d;
-  color: #c8a243;
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
   margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0d0d0d;
+  color: #d4af37;
+  text-align: center;
 }
-header {
+
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 60px;
+  padding: 15px 40px;
+  background: #000;
 }
+
 .logo {
-  height: 80px;
+  height: 40px;
 }
-.lang-select button {
-  background: transparent;
-  border: 1px solid #c8a243;
-  color: #c8a243;
-  margin: 0 4px;
-  padding: 6px 10px;
-  cursor: pointer;
-}
-nav {
-  margin: 30px 0;
-}
+
 nav a {
-  color: #c8a243;
+  color: #d4af37;
   margin: 0 10px;
   text-decoration: none;
+  font-weight: 500;
 }
-h1, h2 {
-  font-weight: 600;
+
+.lang-select button {
+  background: transparent;
+  color: #d4af37;
+  border: 1px solid #d4af37;
+  margin: 0 3px;
+  padding: 4px 8px;
+  cursor: pointer;
 }
-footer {
-  margin-top: 60px;
-  font-size: 14px;
-  opacity: 0.8;
+
+.hero {
+  padding: 80px 20px;
+}
+
+.btn {
+  background: #d4af37;
+  color: #000;
+  padding: 10px 20px;
+  margin: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn.secondary {
+  background: transparent;
+  color: #d4af37;
+  border: 1px solid #d4af37;
+}
+
+.content {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  line-height: 1.6;
 }
