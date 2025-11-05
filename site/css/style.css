@@ -221,4 +221,45 @@ footer {
     opacity: 1;
     transform: scale(1);
   }
+/* ==============================
+   Alt kısımda dönen sikke
+   ============================== */
+.coin-wrapper {
+  position: fixed;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+.coin {
+  width: 140px;
+  height: 140px;
+  animation: rotateCoin 8s linear infinite;
+  filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.6));
+  transition: transform 0.3s ease;
+}
+
+.coin:hover {
+  transform: scale(1.1);
+}
+
+@keyframes rotateCoin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+/* mobil uyum */
+@media (max-width: 768px) {
+  .coin {
+    width: 90px;
+    height: 90px;
+    animation-duration: 12s;
+  }
+}
+
 }
