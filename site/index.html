@@ -6,6 +6,7 @@
   <meta name="description" content="UBI ROYAL NATA — URN Token resmi tanıtım sayfası. Dijital ekonomide altın standart." />
   <title>UBI ROYAL NATA — URN Token</title>
 
+  <!-- Stil dosyası -->
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
@@ -14,48 +15,107 @@
   <!-- Arka plan -->
   <canvas id="bg"></canvas>
 
-  <!-- Üst menü -->
+  <!-- Üst Menü -->
   <header>
-    <div class="left-header">
-      <img src="images/dunya-logo.png" alt="UBI ROYAL NATA Dünya" class="coin" />
-    </div>
-
+    <img src="images/UBI-ROYAL-NATA-logo.png" alt="UBI ROYAL NATA" class="logo" />
     <nav>
-      <a href="#about">Hakkında</a>
-      <a href="#tokenomics">Tokenomik</a>
-      <a href="#roadmap">Yol Haritası</a>
-      <a href="#whitepaper">Whitepaper</a>
+      <a href="#about" data-translate="nav_about">Hakkında</a>
+      <a href="#tokenomics" data-translate="nav_tokenomics">Tokenomik</a>
+      <a href="#roadmap" data-translate="nav_roadmap">Yol Haritası</a>
+      <a href="#whitepaper" data-translate="nav_whitepaper">Whitepaper</a>
     </nav>
-
     <div class="lang-select">
       <button data-lang="tr">TR</button>
       <button data-lang="en">EN</button>
     </div>
   </header>
 
-  <!-- Ana içerik -->
-  <main class="hero">
-    <div class="left">
+  <!-- Ana Bölüm -->
+  <section class="hero">
+    <div class="coin-wrapper">
       <div class="coin-glow"></div>
-      <img src="images/UBI-ROYAL-NATA-logo.png" alt="UBI ROYAL NATA Coin" class="coin" />
+      <img src="images/dunya-logo.png" alt="URN Dünya" class="coin" />
     </div>
 
-    <div class="right">
-      <h1>UBI ROYAL NATA<br>— URN Token</h1>
+    <div class="hero-content">
+      <h1>UBI ROYAL NATA — URN Token</h1>
       <p>Merkezi olmayan değerlerle özgürlük, adalet ve refah.</p>
-      <div class="buttons">
-        <a href="#" class="btn">Satın Al / Takas</a>
-        <a href="#" class="btn secondary">Beyaz Bülten</a>
+      <div class="hero-buttons">
+        <button>Satın Al / Takas</button>
+        <button class="secondary">Beyaz Bülten</button>
       </div>
     </div>
-  </main>
+  </section>
 
-  <!-- Alt bilgi -->
+  <!-- Hakkında -->
+  <section id="about">
+    <h2>Proje Hakkında</h2>
+    <p>
+      UBI ROYAL NATA (URN), merkeziyetsiz finansın (DeFi) temel taşlarından biri olmayı hedefleyen,
+      çok zincirli (multi-chain) yapısıyla güçlü bir altyapı sunan bir dijital varlıktır.
+    </p>
+  </section>
+
+  <!-- Tokenomics -->
+  <section id="tokenomics">
+    <h2>Tokenomik</h2>
+    <ul>
+      <li>Toplam Arz: 1.000.000.000 URN</li>
+      <li>Standart: BEP-20</li>
+      <li>Ondalık: 18</li>
+      <li>Arz Artışı: Kullanıma bağlı dinamik model</li>
+    </ul>
+  </section>
+
+  <!-- Yol Haritası -->
+  <section id="roadmap">
+    <h2>Yol Haritası</h2>
+    <div class="timeline">
+      <div class="phase">
+        <h3>Q4 2025</h3>
+        <p>Token lansmanı ve global listeleme</p>
+      </div>
+      <div class="phase">
+        <h3>Q1 2026</h3>
+        <p>Mobil cüzdan ve kimlik entegrasyonu</p>
+      </div>
+      <div class="phase">
+        <h3>Q2 2026</h3>
+        <p>Asya ve Afrika ortaklık ağı</p>
+      </div>
+      <div class="phase">
+        <h3>Q3 2026</h3>
+        <p>Governance sistemi aktifleşmesi</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Whitepaper -->
+  <section id="whitepaper">
+    <h2>Whitepaper</h2>
+    <p>
+      URN Token’ın vizyonu, teknolojik temeli ve ekonomik modeli hakkında detaylı bilgi için resmi Whitepaper’ı inceleyin.
+    </p>
+    <div class="hero-buttons">
+      <button>PDF İndir</button>
+    </div>
+  </section>
+
+  <!-- İletişim -->
+  <section id="contact">
+    <h2>İletişim</h2>
+    <p>
+      İşbirliği ve listeleme talepleriniz için bizimle iletişime geçebilirsiniz: <br />
+      <strong>info@ubiroyalnata.com</strong>
+    </p>
+  </section>
+
+  <!-- Footer -->
   <footer>
     © 2025 UBI ROYAL NATA — URN Token. Tüm hakları saklıdır.
   </footer>
 
-  <script src="js/particles.js"></script>
+  <!-- Dil ve animasyon scripti -->
+  <script src="js/lang.js"></script>
 </body>
 </html>
-<link rel="stylesheet" href="css/style.css?v=2" />
