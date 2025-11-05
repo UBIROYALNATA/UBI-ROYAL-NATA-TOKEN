@@ -48,7 +48,7 @@ header {
 .logo {
   height: 80px;
   width: auto;
-  margin: 10px 20px;
+  margin: 15px 25px;
   opacity: 0;
   transform: scale(0.9);
   animation: logoFadeIn 1.5s ease forwards;
