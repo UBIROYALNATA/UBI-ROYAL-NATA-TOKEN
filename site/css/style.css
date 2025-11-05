@@ -46,14 +46,14 @@ header {
 
 /* Logo */
 .logo {
-  height: 80px;
+  height: 1000px;
   width: auto;
-  margin: 15px 25px;
+  margin: 10px 25px;
   opacity: 0;
   transform: scale(0.9);
   animation: logoFadeIn 1.5s ease forwards;
   transition: transform 0.4s ease, filter 0.4s ease;
-  filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.3));
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.3));
 }
 
 .logo:hover {
