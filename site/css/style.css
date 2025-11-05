@@ -46,14 +46,14 @@ header {
 
 /* Logo */
 .logo {
-  height: 1000px;
+  height: 80px;
   width: auto;
-  margin: 10px 25px;
+  margin: 10px 20px;
   opacity: 0;
   transform: scale(0.9);
   animation: logoFadeIn 1.5s ease forwards;
   transition: transform 0.4s ease, filter 0.4s ease;
-  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.3));
+  filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.3));
 }
 
 .logo:hover {
@@ -196,6 +196,58 @@ footer {
   font-size: 0.9rem;
 }
 
+/* ==============================
+   Dönen Sikke + Işık Efekti
+   ============================== */
+.coin-wrapper {
+  position: fixed;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+.coin {
+  width: 140px;
+  height: 140px;
+  animation: rotateCoin 8s linear infinite;
+  filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.6));
+  transition: transform 0.3s ease;
+}
+
+.coin:hover {
+  transform: scale(1.1);
+}
+
+/* ışık halkası */
+.coin-glow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 220px;
+  height: 220px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.25) 0%, transparent 70%);
+  animation: glowPulse 4s ease-in-out infinite;
+  filter: blur(20px);
+  z-index: -1;
+}
+
+/* mobil uyum */
+@media (max-width: 768px) {
+  .coin {
+    width: 90px;
+    height: 90px;
+    animation-duration: 12s;
+  }
+
+  .coin-glow {
+    width: 140px;
+    height: 140px;
+  }
+}
+
 /* Animasyonlar */
 @keyframes fadeIn {
   from { opacity: 0; }
@@ -221,27 +273,6 @@ footer {
     opacity: 1;
     transform: scale(1);
   }
-/* ==============================
-   Alt kısımda dönen sikke
-   ============================== */
-.coin-wrapper {
-  position: fixed;
-  left: 5%;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 5;
-}
-
-.coin {
-  width: 140px;
-  height: 140px;
-  animation: rotateCoin 8s linear infinite;
-  filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.6));
-  transition: transform 0.3s ease;
-}
-
-.coin:hover {
-  transform: scale(1.1);
 }
 
 @keyframes rotateCoin {
@@ -253,13 +284,17 @@ footer {
   }
 }
 
-/* mobil uyum */
-@media (max-width: 768px) {
-  .coin {
-    width: 90px;
-    height: 90px;
-    animation-duration: 12s;
+@keyframes glowPulse {
+  0% {
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(1);
   }
-}
-
+  50% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1.15);
+  }
+  100% {
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
