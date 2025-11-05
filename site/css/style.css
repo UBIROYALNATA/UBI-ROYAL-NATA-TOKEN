@@ -1,6 +1,6 @@
 /* ==============================
    UBI ROYAL NATA — URN Token
-   Güncel Stil
+   Güncel Stil (Dünya sola 15%)
    ============================== */
 
 * {
@@ -54,7 +54,7 @@ header {
   display: flex;
   justify-content: flex-end;
   gap: 28px;
-  margin-right: 160px; /* dil butonlarına yaklaşır */
+  margin-right: 160px; /* dil butonlarına yakın */
 }
 
 .main-nav a {
@@ -102,19 +102,19 @@ header {
 
 /* Dünya Küresi */
 .world {
-  flex: 0 0 35%;
+  flex: 0 0 40%;
   display: flex;
-  justify-content: flex-end; /* daha sola */
+  justify-content: flex-start;
   align-items: center;
-  padding-left: 6%;
+  padding-left: 15%;
 }
 
 .coin {
-  width: 280px;
-  height: 280px;
+  width: 350px;
+  height: 350px;
   border-radius: 50%;
   animation: spin 40s linear infinite;
-  filter: drop-shadow(0 0 45px rgba(255, 215, 0, 0.55));
+  filter: drop-shadow(0 0 55px rgba(255, 215, 0, 0.55));
 }
 
 /* Yazı Alanı */
@@ -189,6 +189,12 @@ footer {
   .world {
     margin-bottom: 30px;
     justify-content: center;
+    padding-left: 0;
+  }
+
+  .coin {
+    width: 220px;
+    height: 220px;
   }
 
   .hero-content {
