@@ -1,4 +1,4 @@
-/* Genel Stil */
+/* Temel yapı */
 * {
   margin: 0;
   padding: 0;
@@ -76,11 +76,13 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   position: relative;
-  text-align: center;
+  text-align: left;
+  padding: 0 100px;
 }
 
 .hero-content {
   max-width: 600px;
+  margin-left: 400px; /* coin'in sağında ortalamak için */
 }
 
 #hero h1 {
@@ -120,11 +122,11 @@ nav a:hover {
   position: absolute;
   left: 8%;
   top: 50%;
-  transform: translateY(-50%);
-  width: 280px;
+  transform: translateY(-50%) rotateY(0deg);
+  width: 320px;
   height: auto;
   animation: spin 14s linear infinite;
-  filter: drop-shadow(0 0 15px rgba(212,175,55,0.4));
+  filter: drop-shadow(0 0 20px rgba(212,175,55,0.6));
 }
 
 @keyframes spin {
@@ -132,7 +134,7 @@ nav a:hover {
   to { transform: translateY(-50%) rotateY(360deg); }
 }
 
-/* Bölümler */
+/* Genel Bölümler */
 section {
   padding: 100px 20px;
   max-width: 900px;
@@ -149,6 +151,7 @@ h2 {
 
 ul {
   list-style: none;
+  padding: 0;
 }
 
 li {
