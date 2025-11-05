@@ -1,6 +1,6 @@
 /* ==============================
    UBI ROYAL NATA — URN Token
-   Dünya %10 hizasında ve 450px
+   Dünya %5 hizasında ve 600px
    ============================== */
 
 * {
@@ -102,24 +102,24 @@ header {
 
 /* Dünya Küresi */
 .world {
-  flex: 0 0 45%;
+  flex: 0 0 55%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 10%;
+  padding-left: 5%;
 }
 
 .coin {
-  width: 450px;
-  height: 450px;
+  width: 600px;
+  height: 600px;
   border-radius: 50%;
   animation: spin 40s linear infinite;
-  filter: drop-shadow(0 0 60px rgba(255, 215, 0, 0.55));
+  filter: drop-shadow(0 0 70px rgba(255, 215, 0, 0.5));
 }
 
 /* Yazı Alanı */
 .hero-content {
-  flex: 0 0 50%;
+  flex: 0 0 45%;
   text-align: left;
   padding-left: 60px;
   animation: fadeIn 2s ease;
