@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-/* GENEL AYARLAR */
+/* ===============================
+   GENEL AYARLAR
+   =============================== */
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +16,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ARKA PLAN */
+/* Arka Plan */
 #bg {
   position: fixed;
   top: 0;
@@ -44,6 +46,7 @@ header {
   backdrop-filter: blur(8px);
 }
 
+/* Logo */
 .logo {
   height: 60px;
   width: auto;
@@ -101,7 +104,7 @@ nav a:hover {
 }
 
 /* ===============================
-   HERO BÖLÜMÜ
+   ANA BÖLÜM (DÜNYA)
    =============================== */
 .hero {
   display: flex;
@@ -112,7 +115,7 @@ nav a:hover {
   gap: 120px;
 }
 
-/* Sol kısım (coin) */
+/* Sol kısım: Dönen dünya */
 .left {
   flex: 1;
   display: flex;
@@ -124,25 +127,26 @@ nav a:hover {
 .coin {
   width: 360px;
   height: auto;
-  animation: spin 16s linear infinite;
-  filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.6));
+  animation: spin 40s linear infinite;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 35px rgba(255, 215, 0, 0.3));
 }
 
 .coin-glow {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 480px;
-  height: 480px;
+  width: 520px;
+  height: 520px;
   transform: translate(-50%, -50%);
-  background: radial-gradient(circle, rgba(255,215,0,0.25) 0%, transparent 80%);
+  background: radial-gradient(circle, rgba(0,180,255,0.25) 0%, rgba(255,215,0,0.15) 45%, transparent 80%);
   border-radius: 50%;
-  filter: blur(35px);
+  filter: blur(45px);
   animation: glowPulse 5s ease-in-out infinite;
   z-index: -1;
 }
 
-/* Sağ kısım (metin ve butonlar) */
+/* Sağ kısım: Başlık ve butonlar */
 .right {
   flex: 1;
   max-width: 550px;
@@ -157,6 +161,7 @@ nav a:hover {
   margin-bottom: 20px;
   color: #f5d76e;
   line-height: 1.3;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
 }
 
 .right p {
@@ -197,7 +202,7 @@ nav a:hover {
 }
 
 /* ===============================
-   ALT BİLGİ (FOOTER)
+   ALT BİLGİ
    =============================== */
 footer {
   text-align: center;
@@ -228,7 +233,7 @@ footer {
 }
 
 /* ===============================
-   MOBİL GÖRÜNÜM
+   MOBİL UYUMLULUK
    =============================== */
 @media (max-width: 900px) {
   header {
