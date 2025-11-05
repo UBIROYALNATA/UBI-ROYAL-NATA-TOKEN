@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,81 +7,94 @@
   <link rel="stylesheet" href="css/style.css" />
   <script defer src="js/lang.js"></script>
 </head>
+
 <body>
-  <header class="navbar">
-    <img src="logo.png" alt="UBI ROYAL NATA" class="logo" />
+  <!-- Arka plan animasyonu -->
+  <canvas id="bg"></canvas>
+
+  <!-- Üst Menü -->
+  <header>
+    <img src="UBI-ROYAL-NATA-logo.png" alt="UBI ROYAL NATA" class="logo" />
     <nav>
-      <a href="#about" data-translate="nav_about">About</a>
-      <a href="#tokenomics" data-translate="nav_tokenomics">Tokenomics</a>
-      <a href="#roadmap" data-translate="nav_roadmap">Roadmap</a>
+      <a href="#about" data-translate="nav_about">Hakkında</a>
+      <a href="#tokenomics" data-translate="nav_tokenomics">Tokenomik</a>
+      <a href="#roadmap" data-translate="nav_roadmap">Yol Haritası</a>
       <a href="#whitepaper" data-translate="nav_whitepaper">Whitepaper</a>
-      <a href="#contact" data-translate="nav_contact">Contact</a>
+      <a href="#contact" data-translate="nav_contact">İletişim</a>
     </nav>
     <div class="lang-select">
-      <button data-lang="en">EN</button>
       <button data-lang="tr">TR</button>
-      <button data-lang="ar">AR</button>
-      <button data-lang="fr">FR</button>
-      <button data-lang="ko">KO</button>
+      <button data-lang="en">EN</button>
     </div>
   </header>
 
-  <section class="hero">
+  <!-- HERO -->
+  <section id="hero">
     <h1>UBI ROYAL NATA — URN Token</h1>
-    <p>Freedom, prosperity and equality through decentralized value.</p>
-    <div class="cta">
-      <a href="https://pancakeswap.finance" target="_blank" class="btn">Buy / Swap</a>
-      <a href="#whitepaper" class="btn secondary">Whitepaper</a>
+    <p>Merkezi olmayan değerlerle özgürlük, refah ve eşitlik.</p>
+    <div class="hero-buttons">
+      <button class="buy-btn">Satın Al / Takas</button>
+      <button class="whitepaper-btn">Beyaz Bülten</button>
     </div>
   </section>
 
-  <section id="about" class="content">
-    <h2>About</h2>
-    <p>
-      URN Token connects Asia, the Middle East and Africa under one financial ecosystem.
-      A project built for freedom, identity and financial inclusion.
-    </p>
+  <!-- HAKKINDA -->
+  <section id="about">
+    <h2>Hakkında</h2>
+    <p>URN Token, Asya, Orta Doğu ve Afrika'yı tek bir finansal ekosistem altında birleştiriyor. 
+      Özgürlük, kimlik ve finansal kapsayıcılık için oluşturulmuş bir projedir.</p>
   </section>
 
-  <section id="tokenomics" class="content">
-    <h2>Tokenomics</h2>
+  <!-- TOKENOMICS -->
+  <section id="tokenomics">
+    <h2>Token Ekonomisi</h2>
     <ul>
-      <li>Total Supply: 1,000,000,000 URN</li>
-      <li>Liquidity Locked: 2 Years</li>
-      <li>Tax: 0%</li>
-      <li>
-        Contract Address:
-        <code id="contract">0x1234...ABCD</code>
-        <button onclick="copyAddress()">Copy</button>
-      </li>
+      <li>Toplam Arz: 1,000,000,000 URN</li>
+      <li>Likidite Kilitli: 2 Yıl</li>
+      <li>Vergi: %0</li>
+      <li>Sözleşme Adresi: <span class="contract">0x1234...ABCD</span> <button class="copy-btn">Kopyala</button></li>
     </ul>
   </section>
 
-  <section id="roadmap" class="content">
-    <h2>Roadmap</h2>
-    <p>Q1: Launch — Q2: Exchange Listings — Q3: Wallet Integration — Q4: Governance</p>
-  </section>
-
-  <section id="whitepaper" class="content">
-    <h2>Whitepaper</h2>
-    <p>
-      Read the full document <a href="whitepaper.pdf" target="_blank">here</a>.
-    </p>
-  </section>
-
-  <footer>
-    <p>© 2025 UBI ROYAL NATA — All Rights Reserved.</p>
-    <div class="social">
-      <a href="#">Twitter</a> | <a href="#">Telegram</a> | <a href="#">BscScan</a>
+  <!-- ROADMAP -->
+  <section id="roadmap">
+    <h2>Yol Haritası</h2>
+    <div class="timeline">
+      <div class="phase">
+        <h3>2025 Q1</h3>
+        <p>Token lansmanı ve topluluk oluşturma</p>
+      </div>
+      <div class="phase">
+        <h3>2025 Q2</h3>
+        <p>Borsalarda listelenme ve DApp geliştirme</p>
+      </div>
+      <div class="phase">
+        <h3>2025 Q3</h3>
+        <p>DI Entegrasyonu ve ID sistemleri</p>
+      </div>
+      <div class="phase">
+        <h3>2025 Q4</h3>
+        <p>Global katılım ve ekosistem genişlemesi</p>
+      </div>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    function copyAddress() {
-      const addr = document.getElementById("contract").innerText;
-      navigator.clipboard.writeText(addr);
-      alert("Contract address copied!");
-    }
-  </script>
+  <!-- WHITEPAPER -->
+  <section id="whitepaper">
+    <h2>Whitepaper</h2>
+    <p>Projemizin vizyonunu, teknolojisini ve token ekonomisini anlatan beyaz bülteni yakında burada paylaşacağız.</p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>İletişim</h2>
+    <p>E-posta: info@ubiroyalnata.org</p>
+    <p>Twitter: <a href="#" target="_blank">@UBIROYALNATA</a></p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 UBI ROYAL NATA — Tüm Hakları Saklıdır.</p>
+  </footer>
 </body>
 </html>
