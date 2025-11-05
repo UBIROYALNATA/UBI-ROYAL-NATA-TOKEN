@@ -7,9 +7,9 @@
 }
 
 body {
+  font-family: 'Poppins', sans-serif;
   background: #000;
   color: #f5d76e;
-  font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
 }
 
@@ -24,50 +24,87 @@ body {
   background: radial-gradient(circle at center, #111 0%, #000 100%);
 }
 
-/* Üst Menü */
+/* Header */
 header {
   width: 100%;
-  text-align: center;
-  padding: 25px 0;
-  border-bottom: 1px solid rgba(245, 215, 110, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
   background: rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid rgba(245, 215, 110, 0.3);
   position: fixed;
   top: 0;
   z-index: 10;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(8px);
 }
 
-header a {
+.logo {
+  height: 60px;
+  width: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.3));
+}
+.logo:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.7));
+}
+
+/* Menü */
+nav {
+  flex: 1;
+  text-align: center;
+}
+
+nav a {
   color: #f5d76e;
   text-decoration: none;
-  margin: 0 25px;
+  margin: 0 18px;
   font-weight: 500;
   transition: 0.3s;
 }
-
-header a:hover {
+nav a:hover {
   color: #fff;
 }
 
-/* Ana Bölüm */
+/* Dil seçici */
+.lang-select {
+  display: flex;
+  gap: 8px;
+}
+.lang-select button {
+  background: transparent;
+  border: 1px solid #f5d76e;
+  color: #f5d76e;
+  padding: 4px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.lang-select button:hover {
+  background: #f5d76e;
+  color: #000;
+}
+
+/* Hero */
 .hero {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 120px;
   min-height: 100vh;
-  padding: 120px 10%;
-  position: relative;
+  padding-top: 140px;
+  padding-bottom: 100px;
 }
 
 .left {
   position: relative;
-  width: 400px;
+  width: 360px;
 }
 
 .coin {
   width: 100%;
-  animation: spin 18s linear infinite;
+  animation: spin 16s linear infinite;
   filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.6));
 }
 
@@ -75,12 +112,12 @@ header a:hover {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 500px;
-  height: 500px;
+  width: 450px;
+  height: 450px;
   transform: translate(-50%, -50%);
   background: radial-gradient(circle, rgba(255,215,0,0.25) 0%, transparent 80%);
   border-radius: 50%;
-  filter: blur(35px);
+  filter: blur(40px);
   animation: glowPulse 5s ease-in-out infinite;
   z-index: -1;
 }
@@ -94,14 +131,14 @@ header a:hover {
   font-size: 3rem;
   font-weight: 700;
   line-height: 1.3;
-  color: #f5d76e;
   margin-bottom: 20px;
+  color: #f5d76e;
 }
 
 .right p {
-  font-size: 1.1rem;
   color: #fff;
   opacity: 0.85;
+  font-size: 1.1rem;
   margin-bottom: 35px;
 }
 
@@ -129,10 +166,18 @@ header a:hover {
   border: 2px solid #f5d76e;
   color: #f5d76e;
 }
-
 .btn.secondary:hover {
   background: #f5d76e;
   color: #000;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px;
+  border-top: 1px solid rgba(245, 215, 110, 0.3);
+  font-size: 0.9rem;
+  color: #ccc;
 }
 
 /* Animasyonlar */
@@ -146,17 +191,21 @@ header a:hover {
   50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.1); }
 }
 
-/* Mobil görünüm */
+/* Mobil */
 @media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
   .hero {
     flex-direction: column;
-    gap: 50px;
     text-align: center;
+    gap: 60px;
   }
   .left {
-    width: 250px;
+    width: 240px;
   }
   .right h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 }
