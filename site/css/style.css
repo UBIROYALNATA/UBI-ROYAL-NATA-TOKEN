@@ -1,6 +1,6 @@
 /* ==============================
    UBI ROYAL NATA — URN Token
-   Dünya %5 hizasında ve 600px
+   Dünya mutlak konumda sola yaslı
    ============================== */
 
 * {
@@ -14,15 +14,6 @@ body {
   background: radial-gradient(circle at center, #0a0a0a 0%, #000 100%);
   color: #f5d76e;
   overflow-x: hidden;
-}
-
-/* Arka plan */
-#bg {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
 }
 
 /* Header */
@@ -48,7 +39,7 @@ header {
   filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.6));
 }
 
-/* Navigasyon */
+/* Menü */
 .main-nav {
   flex: 1;
   display: flex;
@@ -90,38 +81,37 @@ header {
   color: #000;
 }
 
-/* Hero Bölümü */
+/* Hero Alanı */
 #hero {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   padding-top: 100px;
-  position: relative;
 }
 
-/* Dünya Küresi */
+/* Dünya Görseli */
 .world {
-  flex: 0 0 55%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding-left: 5%;
+  position: absolute;
+  left: 5%;           /* kenara yaklaştırma */
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .coin {
   width: 600px;
   height: 600px;
   border-radius: 50%;
-  animation: spin 40s linear infinite;
-  filter: drop-shadow(0 0 70px rgba(255, 215, 0, 0.5));
+  animation: spin 50s linear infinite;
+  filter: drop-shadow(0 0 70px rgba(255, 215, 0, 0.55));
 }
 
 /* Yazı Alanı */
 .hero-content {
-  flex: 0 0 45%;
+  max-width: 600px;
   text-align: left;
-  padding-left: 60px;
+  margin-left: 45%;
   animation: fadeIn 2s ease;
 }
 
@@ -179,17 +169,14 @@ footer {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Mobil uyum */
+/* Mobil */
 @media (max-width: 900px) {
-  #hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
   .world {
+    position: static;
+    transform: none;
     margin-bottom: 30px;
+    display: flex;
     justify-content: center;
-    padding-left: 0;
   }
 
   .coin {
@@ -198,6 +185,7 @@ footer {
   }
 
   .hero-content {
-    padding: 0;
+    margin-left: 0;
+    text-align: center;
   }
 }
