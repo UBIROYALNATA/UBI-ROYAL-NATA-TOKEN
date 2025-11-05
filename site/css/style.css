@@ -14,72 +14,48 @@ body {
   overflow-x: hidden;
 }
 
-/* ARKA PLAN */
-#bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -2;
-  background: radial-gradient(circle at center, #111 0%, #000 100%);
-}
-
 /* HEADER */
 header {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 60px;
-  background: rgba(0, 0, 0, 0.8);
+  height: 80px;
+  background: rgba(0, 0, 0, 0.9);
   border-bottom: 1px solid rgba(245, 215, 110, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 60px;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
-  height: 80px;
+  z-index: 100;
   backdrop-filter: blur(8px);
 }
 
-/* LOGO */
 .logo {
-  height: 60px;
-  width: auto;
-  cursor: pointer;
+  height: 55px;
   filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.4));
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-.logo:hover {
-  transform: scale(1.05);
-  filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.8));
 }
 
-/* MENÜ */
 nav a {
   color: #f5d76e;
   text-decoration: none;
-  margin: 0 20px;
+  margin: 0 18px;
   font-weight: 500;
   transition: color 0.3s;
 }
+
 nav a:hover {
   color: #fff;
 }
 
-/* DİL SEÇİCİ */
-.lang-select {
-  display: flex;
-  gap: 10px;
-}
 .lang-select button {
   background: transparent;
   border: 1px solid #f5d76e;
   color: #f5d76e;
-  padding: 5px 10px;
-  border-radius: 4px;
+  margin-left: 5px;
+  padding: 4px 8px;
+  border-radius: 3px;
   cursor: pointer;
-  font-size: 0.9rem;
   transition: 0.3s;
 }
 .lang-select button:hover {
@@ -89,30 +65,33 @@ nav a:hover {
 
 /* HERO */
 #hero {
-  height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
+  justify-content: center;
+  height: 100vh;
+  padding-top: 100px;
   position: relative;
 }
 
-/* DÜNYA GÖRSELİ */
+/* SOL TARAF - DÜNYA */
+.hero-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
 .coin-wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   width: 420px;
   height: 420px;
-  z-index: 0;
 }
 
 .coin {
   width: 100%;
   height: auto;
-  animation: spin 50s linear infinite;
+  animation: spin 40s linear infinite;
   border-radius: 50%;
   filter: drop-shadow(0 0 45px rgba(255, 215, 0, 0.4));
 }
@@ -126,19 +105,20 @@ nav a:hover {
   transform: translate(-50%, -50%);
   border-radius: 50%;
   background: radial-gradient(circle, rgba(255, 215, 0, 0.25) 0%, transparent 70%);
-  filter: blur(70px);
+  filter: blur(60px);
   animation: glowPulse 6s ease-in-out infinite;
   z-index: -1;
 }
 
-/* YAZI KISMI */
-.hero-content {
-  position: relative;
+/* SAĞ TARAF - METİN */
+.hero-right {
+  flex: 1;
+  text-align: left;
+  padding: 40px;
   z-index: 2;
-  margin-top: 400px;
 }
 
-.hero-content h1 {
+.hero-right h1 {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 15px;
@@ -146,16 +126,16 @@ nav a:hover {
   text-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
 }
 
-.hero-content p {
-  font-size: 1.1rem;
+.hero-right p {
+  font-size: 1.2rem;
   color: #ddd;
   margin-bottom: 25px;
+  max-width: 500px;
 }
 
 /* BUTONLAR */
 .hero-buttons {
   display: flex;
-  justify-content: center;
   gap: 20px;
 }
 
@@ -191,7 +171,7 @@ footer {
   border-top: 1px solid rgba(245, 215, 110, 0.3);
   color: #f5d76e;
   font-size: 0.9rem;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.9);
   position: relative;
   z-index: 5;
 }
@@ -208,9 +188,19 @@ footer {
 }
 
 /* MOBİL */
-@media (max-width: 768px) {
-  .coin-wrapper { width: 280px; height: 280px; }
-  .hero-content h1 { font-size: 2rem; }
-  .hero-content p { font-size: 1rem; }
-  .hero-buttons { flex-direction: column; }
+@media (max-width: 900px) {
+  #hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-right {
+    padding: 0;
+  }
+  .hero-right h1 {
+    font-size: 2.2rem;
+  }
+  .coin-wrapper {
+    width: 280px;
+    height: 280px;
+  }
 }
