@@ -3,54 +3,120 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="UBI ROYAL NATA — URN Token resmi tanıtım sayfası. Dijital ekonomide altın standart." />
   <title>UBI ROYAL NATA — URN Token</title>
+
+  <!-- Stil dosyası -->
   <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
+
 <body>
   <!-- Arka plan -->
   <canvas id="bg"></canvas>
 
-  <!-- Üst Menü -->
+  <!-- Üst menü -->
   <header>
     <img src="images/UBI-ROYAL-NATA-logo.png" alt="UBI ROYAL NATA" class="logo" />
     <nav>
-      <a href="#about">Hakkında</a>
-      <a href="#tokenomics">Tokenomik</a>
-      <a href="#roadmap">Yol Haritası</a>
-      <a href="#whitepaper">Whitepaper</a>
-      <a href="#contact">İletişim</a>
+      <a href="#about" data-translate="nav_about">Hakkında</a>
+      <a href="#tokenomics" data-translate="nav_tokenomics">Tokenomik</a>
+      <a href="#roadmap" data-translate="nav_roadmap">Yol Haritası</a>
+      <a href="#whitepaper" data-translate="nav_whitepaper">Whitepaper</a>
+      <a href="#contact" data-translate="nav_contact">İletişim</a>
     </nav>
     <div class="lang-select">
-      <button>TR</button>
-      <button>EN</button>
+      <button data-lang="tr">TR</button>
+      <button data-lang="en">EN</button>
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- Kahraman bölümü -->
   <section id="hero">
-    <div class="hero-wrapper">
-      <div class="coin-container">
-        <img src="images/URN-coin.png" alt="URN Coin" class="coin" />
+    <h1>UBI ROYAL NATA</h1>
+    <p>URN Token — dijital ekonominin yeni çağında, altın standardını blockchain dünyasına taşıyor.</p>
+
+    <div class="hero-buttons">
+      <button>Whitepaper</button>
+      <button>Satın Al</button>
+    </div>
+  </section>
+
+  <!-- Hakkında -->
+  <section id="about">
+    <h2>Proje Hakkında</h2>
+    <p>
+      UBI ROYAL NATA (URN), merkeziyetsiz finansın (DeFi) temel taşlarından biri olmayı hedefleyen,
+      çok zincirli (multi-chain) yapısıyla güçlü bir altyapı sunan bir dijital varlıktır.
+    </p>
+  </section>
+
+  <!-- Tokenomics -->
+  <section id="tokenomics">
+    <h2>Tokenomik</h2>
+    <ul>
+      <li>Toplam Arz: 1.000.000.000 URN</li>
+      <li>Standart: BEP-20</li>
+      <li>Ondalık: 18</li>
+      <li>Arz Artışı: Kullanıma bağlı dinamik model</li>
+    </ul>
+  </section>
+
+  <!-- Roadmap -->
+  <section id="roadmap">
+    <h2>Yol Haritası</h2>
+    <div class="timeline">
+      <div class="phase">
+        <h3>Q4 2025</h3>
+        <p>Token lansmanı ve global listeleme</p>
       </div>
-      <div class="hero-content">
-        <h1>UBI ROYAL NATA — URN Token</h1>
-        <p>Merkezi olmayan değerlerle özgürlük, refah ve eşitlik.</p>
-        <div class="hero-buttons">
-          <button class="buy-btn">Satın Al / Takas</button>
-          <button class="whitepaper-btn">Beyaz Bülten</button>
-        </div>
+      <div class="phase">
+        <h3>Q1 2026</h3>
+        <p>Mobil cüzdan ve kimlik entegrasyonu</p>
+      </div>
+      <div class="phase">
+        <h3>Q2 2026</h3>
+        <p>Asya ve Afrika ortaklık ağı</p>
+      </div>
+      <div class="phase">
+        <h3>Q3 2026</h3>
+        <p>Governance sistemi aktifleşmesi</p>
       </div>
     </div>
   </section>
 
-  <!-- Alt bölümler -->
-  <section id="about">
-    <h2>UBI ROYAL NATA Hakkında</h2>
-    <p>URN Token, Asya, Orta Doğu ve Afrika’yı tek bir finansal ekosistem altında birleştirir.</p>
+  <!-- Whitepaper -->
+  <section id="whitepaper">
+    <h2>Whitepaper</h2>
+    <p>
+      URN Token’ın vizyonu, teknolojik temeli ve ekonomik modeli hakkında detaylı bilgi için resmi Whitepaper’ı inceleyin.
+    </p>
+    <div class="hero-buttons">
+      <button>PDF İndir</button>
+    </div>
   </section>
 
+  <!-- İletişim -->
+  <section id="contact">
+    <h2>İletişim</h2>
+    <p>
+      İşbirliği ve listeleme talepleriniz için bizimle iletişime geçebilirsiniz: <br />
+      <strong>info@ubiroyalnata.com</strong>
+    </p>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    © 2025 UBI ROYAL NATA — Tüm Hakları Saklıdır.
+    © 2025 UBI ROYAL NATA — URN Token. Tüm hakları saklıdır.
   </footer>
+
+  <!-- Dönen sikke -->
+  <div class="coin-wrapper">
+    <div class="coin-glow"></div>
+    <img src="images/UBI-ROYAL-NATA-logo.png" alt="URN Coin" class="coin" />
+  </div>
+
+  <!-- Dil ve animasyon scripti -->
+  <script src="js/lang.js"></script>
 </body>
 </html>
