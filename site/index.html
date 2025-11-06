@@ -5,134 +5,141 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>UBI ROYAL NATA — URN Token</title>
 
-  <!-- TEK DOSYALIK STİL -->
   <style>
-    *{margin:0;padding:0;box-sizing:border-box}
-    html,body{height:100%}
+    *{margin:0;padding:0;box-sizing:border-box;}
     body{
-      font-family: system-ui,-apple-system,"Poppins",Arial,sans-serif;
-      background:#000;color:#d4af37;overflow-x:hidden;position:relative;min-height:100vh;
+      font-family:"Poppins",sans-serif;
+      background:#000;
+      color:#d4af37;
+      overflow-x:hidden;
+      position:relative;
+      min-height:100vh;
     }
-    .stars{position:fixed;inset:0;z-index:0;opacity:.22;
+
+    /* Arka plan yıldız efekti */
+    .stars{
+      position:fixed;inset:0;
       background:
-        radial-gradient(#fff,transparent 60%) 0 0/2px 2px repeat,
-        radial-gradient(#fff,transparent 60%) 1px 1px/3px 3px repeat;
-      animation:starmove 120s linear infinite}
-    @keyframes starmove{to{background-position:5000px 5000px,-4000px -4000px}}
-
-    .topbar{
-      position:sticky;top:0;z-index:2;
-      display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center;
-      padding:18px 28px;background:rgba(0,0,0,.8);
-      border-bottom:1px solid rgba(212,175,55,.25);backdrop-filter:blur(6px)
+        radial-gradient(white,transparent 60%) 0 0/2px 2px repeat,
+        radial-gradient(white,transparent 60%) 1px 1px/3px 3px repeat;
+      opacity:.25;z-index:0;
+      animation:moveStars 100s linear infinite;
     }
-    .logo img{height:56px;display:block}
-    .main-nav ul{list-style:none;display:flex;gap:28px;justify-content:center}
-    .main-nav a{color:#f3f3f3;text-decoration:none;font-weight:500}
-    .main-nav a:hover{color:#d4af37}
-    .lang{display:flex;align-items:center;gap:8px}
-    .lang a{color:#f3f3f3;text-decoration:none;font-weight:600}
-    .lang span{color:#d4af37;opacity:.7}
+    @keyframes moveStars{
+      to{background-position:10000px 10000px,-8000px -8000px;}
+    }
 
+    /* Üst bar */
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 60px;
+      border-bottom:1px solid rgba(212,175,55,.3);
+      position:relative;
+      z-index:1;
+      background:rgba(0,0,0,.8);
+      backdrop-filter:blur(6px);
+    }
+    header img{height:70px;}
+    nav ul{list-style:none;display:flex;gap:40px;}
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      font-weight:500;
+      transition:.3s;
+    }
+    nav a:hover{color:#d4af37;}
+    .lang{display:flex;align-items:center;gap:8px;}
+    .lang a{color:#fff;text-decoration:none;}
+    .lang span{color:#d4af37;}
+
+    /* Hero alanı */
     .hero{
-      position:relative;z-index:1;
-      display:grid;grid-template-columns:minmax(260px,380px) minmax(280px,640px);
-      gap:60px;align-items:center;justify-content:center;padding:80px 24px 60px
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:60px;
+      padding:100px 20px;
+      position:relative;
+      z-index:1;
     }
-    .coin img{width:100%;height:auto;display:block;animation:spin 40s linear infinite;
-      filter:drop-shadow(0 10px 30px rgba(212,175,55,.25))}
-    @keyframes spin{to{transform:rotateY(360deg)}}
-    .content h1{font-size:clamp(32px,5vw,56px);line-height:1.1;color:#f5d76e}
-    .content h1 span{color:#fff}
-    .content p{margin-top:16px;color:#dcdcdc;line-height:1.6;font-size:clamp(15px,2vw,18px)}
-    .buttons{margin-top:28px;display:flex;gap:16px;flex-wrap:wrap}
-    .btn{display:inline-block;padding:12px 22px;border-radius:8px;
-      font-weight:700;text-decoration:none;transition:transform .15s ease,opacity .2s ease}
-    .btn.gold{background:#d4af37;color:#000}
-    .btn.white{background:#fff;color:#000}
-    .btn:hover{transform:translateY(-2px);opacity:.9}
+    .coin img{
+      width:300px;
+      animation:spin 40s linear infinite;
+      filter:drop-shadow(0 10px 30px rgba(212,175,55,.25));
+    }
+    @keyframes spin{to{transform:rotateY(360deg);}}
 
-    footer{position:relative;z-index:1;text-align:center;padding:32px 16px;color:#bfbfbf;
-      border-top:1px solid rgba(212,175,55,.2)}
-    footer a{color:#d4af37;text-decoration:none}
+    .content{max-width:600px;text-align:left;}
+    .content h1{font-size:2.8rem;color:#f5d76e;}
+    .content h1 span{color:#fff;}
+    .content p{margin-top:20px;color:#ccc;line-height:1.6;}
 
-    @media(max-width:900px){.hero{grid-template-columns:1fr;gap:30px;padding-top:50px}
-      .logo img{height:46px}}
+    .buttons{margin-top:40px;display:flex;gap:20px;}
+    .btn{
+      padding:12px 26px;
+      border-radius:6px;
+      font-weight:600;
+      text-decoration:none;
+      transition:.3s;
+    }
+    .btn.gold{background:#d4af37;color:#000;}
+    .btn.white{background:#fff;color:#000;}
+    .btn:hover{opacity:.85;transform:scale(1.05);}
+
+    footer{
+      text-align:center;
+      padding:30px 20px;
+      color:#aaa;
+      font-size:.9rem;
+      border-top:1px solid rgba(212,175,55,.3);
+      position:relative;
+      z-index:1;
+    }
+    footer a{color:#d4af37;text-decoration:none;margin:0 5px;}
   </style>
-
-  <!-- GÖRSEL YOLU OTOMATİK DÜZELTME (site/images -> alan/resimler) -->
-  <script>
-    function setWithFallback(img, paths){
-      let i = 0;
-      function tryNext(){
-        if(i >= paths.length) return;
-        img.src = paths[i++];
-      }
-      img.addEventListener('error', tryNext, { once:false });
-      tryNext();
-    }
-    document.addEventListener('DOMContentLoaded', function(){
-      // LOGO
-      setWithFallback(document.getElementById('logoImg'), [
-        './site/images/UBI-ROYAL-NATA-logo.png',
-        './alan/resimler/UBI-ROYAL-NATA-logo.png'
-      ]);
-      // COIN
-      setWithFallback(document.getElementById('coinImg'), [
-        './site/images/URN-coin.png',
-        './alan/resimler/URN-coin.png'
-      ]);
-    });
-  </script>
 </head>
 <body>
-  <div class="stars" aria-hidden="true"></div>
+  <div class="stars"></div>
 
-  <header class="topbar">
-    <div class="logo">
-      <img id="logoImg" alt="UBI ROYAL NATA Logo" />
-    </div>
-
-    <nav class="main-nav">
+  <header>
+    <img src="https://ubiroyalnata.github.io/UBI-ROYAL-NATA-TOKEN/site/images/UBI-ROYAL-NATA-logo.png" alt="UBI ROYAL NATA Logo" />
+    <nav>
       <ul>
-        <li><a href="#about">Hakkında</a></li>
-        <li><a href="#tokenomics">Tokenomik</a></li>
-        <li><a href="#roadmap">Yol Haritası</a></li>
-        <li><a href="#whitepaper">Whitepaper</a></li>
+        <li><a href="#">Hakkında</a></li>
+        <li><a href="#">Tokenomik</a></li>
+        <li><a href="#">Yol Haritası</a></li>
+        <li><a href="#">Whitepaper</a></li>
       </ul>
     </nav>
-
-    <nav class="lang">
-      <a href="#" aria-label="Türkçe">TR</a><span>•</span>
-      <a href="#" aria-label="English">EN</a><span>•</span>
-      <a href="#" aria-label="Français">FR</a>
-    </nav>
+    <div class="lang">
+      <a href="#">TR</a><span>•</span>
+      <a href="#">EN</a><span>•</span>
+      <a href="#">FR</a>
+    </div>
   </header>
 
   <main>
-    <section class="hero" id="home">
+    <section class="hero">
       <div class="coin">
-        <img id="coinImg" alt="URN Coin" />
+        <img src="https://ubiroyalnata.github.io/UBI-ROYAL-NATA-TOKEN/site/images/URN-coin.png" alt="URN Coin" />
       </div>
       <div class="content">
         <h1>UBI ROYAL NATA — <span>URN Token</span></h1>
-        <p>UBI ROYAL NATA — dijital varlıklarda adalet ve ekonomi için örnek proje.</p>
+        <p>Dijital varlıklarda adalet ve ekonomi için örnek proje.</p>
         <div class="buttons">
-          <a class="btn gold" href="#buy">Satın Al / Takas</a>
-          <a class="btn white" href="#whitepaper">Beyaz Bülten</a>
+          <a href="#" class="btn gold">Satın Al / Takas</a>
+          <a href="#" class="btn white">Beyaz Bülten</a>
         </div>
       </div>
     </section>
-
-    <section id="about"></section>
-    <section id="tokenomics"></section>
-    <section id="roadmap"></section>
-    <section id="whitepaper"></section>
   </main>
 
   <footer>
     <p>© 2025 UBI ROYAL NATA — Dijital varlıklarda adalet ve ekonomi için örnek proje.</p>
-    <p><a href="#contact">İletişim</a> | <a href="#legal">Yasal</a></p>
+    <p><a href="#">İletişim</a> | <a href="#">Yasal</a></p>
   </footer>
 </body>
 </html>
