@@ -3,45 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="UBI ROYAL NATA — URN Token resmi tanıtım sayfası. Dijital ekonomide altın standart." />
   <title>UBI ROYAL NATA — URN Token</title>
-
-  <!-- Stil dosyası -->
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-  <!-- Galaksi arka plan -->
   <div id="stars"></div>
 
-  <!-- Üst Menü -->
   <header>
     <img src="images/UBI-ROYAL-NATA-logo.png" alt="UBI ROYAL NATA" class="logo" />
     <nav>
-      <a href="#about" data-translate="nav_about">Hakkında</a>
-      <a href="#tokenomics" data-translate="nav_tokenomics">Tokenomik</a>
-      <a href="#roadmap" data-translate="nav_roadmap">Yol Haritası</a>
-      <a href="#whitepaper" data-translate="nav_whitepaper">Whitepaper</a>
+      <a href="#about">Hakkında</a>
+      <a href="#tokenomics">Tokenomik</a>
+      <a href="#roadmap">Yol Haritası</a>
+      <a href="#whitepaper">Whitepaper</a>
     </nav>
     <div class="lang-select">
-      <button data-lang="tr">TR</button>
-      <button data-lang="en">EN</button>
-      <button data-lang="kr">KR</button>
+      <button>TR</button>
+      <button>EN</button>
+      <button>KR</button>
     </div>
   </header>
 
-  <!-- Ana Bölüm -->
   <section id="hero">
     <div class="world">
-      <img src="images/dunya-logo.png" alt="URN World" class="coin" />
+      <img src="images/dunya-logo.png" alt="Dünya" class="coin" />
     </div>
 
     <div class="hero-content">
       <h1>UBI ROYAL NATA<br>— URN Token</h1>
-      <p>
-        Merkezi olmayan değerlerle özgürlük, adalet ve refah.
-      </p>
+      <p>Merkezi olmayan değerlerle özgürlük, adalet ve refah.</p>
       <div class="hero-buttons">
         <button class="outline">Satın Al / Takas</button>
         <button class="outline">Beyaz Bülten</button>
@@ -49,88 +41,20 @@
     </div>
   </section>
 
-  <!-- Hakkında -->
-  <section id="about">
-    <h2>Proje Hakkında</h2>
-    <p>
-      UBI ROYAL NATA (URN), merkeziyetsiz finansın (DeFi) temel taşlarından biri olmayı hedefleyen,
-      çok zincirli yapısıyla güçlü bir altyapı sunan bir dijital varlıktır.
-    </p>
-  </section>
-
-  <!-- Tokenomics -->
-  <section id="tokenomics">
-    <h2>Tokenomik</h2>
-    <ul>
-      <li>Toplam Arz: 1.000.000.000 URN</li>
-      <li>Standart: BEP-20</li>
-      <li>Ondalık: 18</li>
-      <li>Arz Artışı: Kullanıma bağlı dinamik model</li>
-    </ul>
-  </section>
-
-  <!-- Roadmap -->
-  <section id="roadmap">
-    <h2>Yol Haritası</h2>
-    <div class="timeline">
-      <div class="phase">
-        <h3>Q4 2025</h3>
-        <p>Token lansmanı ve global listeleme</p>
-      </div>
-      <div class="phase">
-        <h3>Q1 2026</h3>
-        <p>Mobil cüzdan ve kimlik entegrasyonu</p>
-      </div>
-      <div class="phase">
-        <h3>Q2 2026</h3>
-        <p>Asya ve Afrika ortaklık ağı</p>
-      </div>
-      <div class="phase">
-        <h3>Q3 2026</h3>
-        <p>Governance sistemi aktifleşmesi</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Whitepaper -->
-  <section id="whitepaper">
-    <h2>Whitepaper</h2>
-    <p>
-      URN Token’ın vizyonu, teknolojik temeli ve ekonomik modeli hakkında detaylı bilgi için resmi Whitepaper’ı inceleyin.
-    </p>
-    <div class="hero-buttons">
-      <button class="outline">PDF İndir</button>
-    </div>
-  </section>
-
-  <!-- İletişim -->
-  <section id="contact">
-    <h2>İletişim</h2>
-    <p>
-      İşbirliği ve listeleme talepleriniz için: <br />
-      <strong>info@ubiroyalnata.com</strong>
-    </p>
-  </section>
-
-  <!-- Alt bilgi -->
   <footer>
     © 2025 UBI ROYAL NATA — URN Token. Tüm hakları saklıdır.
   </footer>
 
-  <!-- Galaksi efektleri -->
   <script>
     const starsContainer = document.getElementById("stars");
-    for (let i = 0; i < 120; i++) {
+    for (let i = 0; i < 100; i++) {
       const star = document.createElement("div");
       star.classList.add("star");
       star.style.top = Math.random() * 100 + "%";
       star.style.left = Math.random() * 100 + "%";
-      star.style.animationDelay = Math.random() * 20 + "s";
+      star.style.animationDelay = Math.random() * 10 + "s";
       starsContainer.appendChild(star);
     }
   </script>
-
-  <!-- Dil scripti -->
-  <script src="js/lang.js"></script>
 </body>
 </html>
