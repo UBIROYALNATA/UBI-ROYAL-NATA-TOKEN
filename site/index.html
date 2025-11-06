@@ -1,44 +1,159 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UBI ROYAL NATA - URN Token</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UBI ROYAL NATA — URN Token</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script defer src="js/script.js"></script>
+  <script defer src="js/lang.js"></script>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="nav-container">
-                <ul class="nav-menu">
-                    <li><a href="#hakkinda">Hakkında</a></li>
-                    <li><a href="#tokenomik">Tokenomik</a></li>
-                    <li><a href="#yol-haritasi">Yol Haritası</a></li>
-                    <li><a href="#whitepaper">Whitepaper</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+  <!-- Arka plan -->
+  <div id="bg"></div>
+  <div class="particles"></div>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1 class="logo">UBI ROYAL NATA</h1>
-                <p class="subtitle">— URN Token</p>
-                <p class="tagline">Merkezi olmayan değerlerle özgürlük, özgürlük ve özgürlük.</p>
-                
-                <div class="cta-buttons">
-                    <a href="#" class="btn primary">Satin Al / Takas</a>
-                    <a href="#" class="btn secondary">Beyaz Bülten</a>
-                </div>
-            </div>
-        </section>
-    </main>
+  <!-- Üst Menü -->
+  <header>
+    <img src="images/UBI-ROYAL-NATA-logo.png" alt="UBI ROYAL NATA" class="logo">
+    <nav>
+      <a href="#about" data-translate="nav_about">Hakkında</a>
+      <a href="#tokenomics" data-translate="nav_tokenomics">Tokenomik</a>
+      <a href="#roadmap" data-translate="nav_roadmap">Yol Haritası</a>
+      <a href="#whitepaper" data-translate="nav_whitepaper">Whitepaper</a>
+      <a href="#contact" data-translate="nav_contact">İletişim</a>
+    </nav>
+    <div class="lang-select">
+      <button data-lang="tr">TR</button>
+      <button data-lang="en">EN</button>
+    </div>
+  </header>
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 UBI ROYAL NATA. Tüm hakları saklıdır.</p>
-        </div>
-    </footer>
+  <!-- HERO Bölümü -->
+  <section id="hero">
+    <div class="coin-container">
+      <img src="images/URN-coin.png" alt="URN Coin" class="coin" />
+    </div>
+    <div class="hero-content">
+      <h1>UBI ROYAL NATA</h1>
+      <p class="subtitle">— URN Token</p>
+      <p class="tagline">Merkezi olmayan değerlerle özgürlük, refah ve eşitlik.</p>
+      <div class="hero-buttons">
+        <button class="buy-btn">Satın Al / Takas</button>
+        <button class="whitepaper-btn">Beyaz Bülten</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hakkında -->
+  <section id="about" class="fade-in">
+    <div class="section-header">
+      <h2>UBI ROYAL NATA Hakkında</h2>
+      <p class="section-description">Geleceğin finansal ekosistemi</p>
+    </div>
+    <p>
+      URN Token, Asya, Orta Doğu ve Afrika'yı tek bir finansal ekosistem altında birleştiren merkeziyetsiz bir projedir.
+      Dijital özgürlük, kimlik ve finansal kapsayıcılık için tasarlanmıştır.
+    </p>
+  </section>
+
+  <!-- Tokenomik -->
+  <section id="tokenomics" class="fade-in">
+    <div class="section-header">
+      <h2>Token Ekonomisi</h2>
+      <p class="section-description">Token dağılımı ve ekonomik model</p>
+    </div>
+    <div class="tokenomics-grid">
+      <div class="token-card">
+        <h3>Toplam Arz</h3>
+        <p>1.000.000.000 URN</p>
+      </div>
+      <div class="token-card">
+        <h3>Likidite Kilitli</h3>
+        <p>2 Yıl</p>
+      </div>
+      <div class="token-card">
+        <h3>Vergi</h3>
+        <p>%0</p>
+      </div>
+      <div class="token-card">
+        <h3>Sözleşme Adresi</h3>
+        <p>0x1234...ABCD</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Yol Haritası -->
+  <section id="roadmap" class="fade-in">
+    <div class="section-header">
+      <h2>Yol Haritası</h2>
+      <p class="section-description">Gelecek planlarımız ve hedeflerimiz</p>
+    </div>
+    <div class="timeline">
+      <div class="phase">
+        <h3>2025 Q1</h3>
+        <p>Başlangıç & Geliştirme</p>
+      </div>
+      <div class="phase">
+        <h3>2025 Q2</h3>
+        <p>Token Lansmanı</p>
+      </div>
+      <div class="phase">
+        <h3>2025 Q3</h3>
+        <p>Topluluk Genişlemesi</p>
+      </div>
+      <div class="phase">
+        <h3>2025 Q4</h3>
+        <p>Ekosistem Entegrasyonları</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Whitepaper -->
+  <section id="whitepaper" class="fade-in">
+    <div class="section-header">
+      <h2>Whitepaper</h2>
+      <p class="section-description">Teknik detaylar ve vizyonumuz</p>
+    </div>
+    <p>Projemizin teknik detaylarını ve vizyonumuzu whitepaper dokümanımızdan inceleyebilirsiniz.</p>
+    <div class="hero-buttons" style="margin-top: 30px;">
+      <button class="whitepaper-btn">Whitepaper'ı İndir</button>
+    </div>
+  </section>
+
+  <!-- İletişim -->
+  <section id="contact" class="fade-in">
+    <div class="section-header">
+      <h2>İletişim</h2>
+      <p class="section-description">Bizimle iletişime geçin</p>
+    </div>
+    <p>Bize ulaşın: info@ubiroyalnata.com</p>
+    <div class="social-links">
+      <a href="#" aria-label="Twitter">🐦</a>
+      <a href="#" aria-label="Telegram">📢</a>
+      <a href="#" aria-label="Discord">💬</a>
+      <a href="#" aria-label="GitHub">💻</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="#about">Hakkında</a>
+        <a href="#tokenomics">Tokenomik</a>
+        <a href="#roadmap">Yol Haritası</a>
+        <a href="#whitepaper">Whitepaper</a>
+        <a href="#contact">İletişim</a>
+      </div>
+      <div class="social-links">
+        <a href="#" aria-label="Twitter">🐦</a>
+        <a href="#" aria-label="Telegram">📢</a>
+        <a href="#" aria-label="Discord">💬</a>
+        <a href="#" aria-label="GitHub">💻</a>
+      </div>
+      <p>© 2025 UBI ROYAL NATA — Tüm Hakları Saklıdır.</p>
+    </div>
+  </footer>
 </body>
 </html>
