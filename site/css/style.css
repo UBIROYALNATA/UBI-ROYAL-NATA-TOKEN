@@ -1,7 +1,7 @@
-/* ==============================
-   UBI ROYAL NATA — URN TOKEN
-   Nihai düzen - 2025
-   ============================== */
+/* ========================================
+   UBI ROYAL NATA — URN Token Style
+   Nihai düzen - sabit dünya, yıldız efekti
+   ======================================== */
 
 * {
   margin: 0;
@@ -16,7 +16,7 @@ body {
   overflow-x: hidden;
 }
 
-/* --- Galaksi Yıldız Arka Plan --- */
+/* --- GALAKSİ ARKA PLAN --- */
 #stars {
   position: fixed;
   top: 0;
@@ -31,9 +31,9 @@ body {
   position: absolute;
   width: 2px;
   height: 2px;
-  background: rgba(255, 240, 200, 0.8);
+  background: rgba(255, 255, 200, 0.8);
   border-radius: 50%;
-  animation: moveStar 18s linear infinite;
+  animation: moveStar 16s linear infinite;
 }
 
 @keyframes moveStar {
@@ -42,12 +42,12 @@ body {
     opacity: 1;
   }
   to {
-    transform: translateY(200px);
-    opacity: 0.3;
+    transform: translateY(300px);
+    opacity: 0.2;
   }
 }
 
-/* --- Üst Menü --- */
+/* --- ÜST MENÜ --- */
 header {
   position: fixed;
   top: 0;
@@ -57,23 +57,30 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 50px;
+  padding: 14px 50px;
   z-index: 10;
   border-bottom: 1px solid rgba(212, 175, 55, 0.3);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(6px);
 }
 
-.logo {
-  height: 65px;
+/* logo */
+.logo img {
+  height: 60px;
   width: auto;
-  filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.3));
+  filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.3));
 }
 
-/* Menü */
+/* menü */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
 nav a {
-  margin: 0 12px;
   color: #d4af37;
   text-decoration: none;
+  margin: 0 18px;
   font-weight: 500;
   transition: 0.3s;
 }
@@ -82,7 +89,7 @@ nav a:hover {
   color: #fff;
 }
 
-/* Dil Seçimi */
+/* dil seçimi */
 .lang-select button {
   background: transparent;
   border: 1px solid #d4af37;
@@ -99,7 +106,7 @@ nav a:hover {
   color: #000;
 }
 
-/* --- Ana Sayfa --- */
+/* --- ANA SAYFA --- */
 #hero {
   height: 100vh;
   display: flex;
@@ -110,12 +117,12 @@ nav a:hover {
   z-index: 1;
 }
 
-/* Dünya Görseli */
+/* dünya görseli */
 .world {
   flex: 0 0 auto;
   position: relative;
-  left: -5%; /* biraz daha sola alındı */
-  margin-right: 5%;
+  left: -10%; /* daha sola */
+  margin-right: 8%;
 }
 
 .coin {
@@ -124,10 +131,9 @@ nav a:hover {
   border-radius: 50%;
   object-fit: contain;
   filter: drop-shadow(0 0 40px rgba(255, 215, 0, 0.4));
-  animation: none; /* sabit */
 }
 
-/* Yazı Alanı */
+/* metin bölümü */
 .hero-content {
   max-width: 600px;
   text-align: left;
@@ -137,15 +143,23 @@ nav a:hover {
   font-size: 2.8rem;
   font-weight: 700;
   color: #f5d76e;
+  margin-bottom: 8px;
+}
+
+.hero-content h2 {
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: #f5d76e;
   margin-bottom: 20px;
 }
 
 .hero-content p {
   font-size: 1.2rem;
   color: #f9eebd;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
+/* butonlar */
 .hero-buttons {
   display: flex;
   gap: 20px;
@@ -155,7 +169,7 @@ nav a:hover {
   background: transparent;
   border: 2px solid #f5d76e;
   color: #f5d76e;
-  padding: 12px 26px;
+  padding: 12px 28px;
   border-radius: 5px;
   font-weight: 600;
   cursor: pointer;
@@ -167,16 +181,16 @@ nav a:hover {
   color: #000;
 }
 
-/* --- Alt Bilgi --- */
+/* alt bilgi */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 18px;
   border-top: 1px solid rgba(212, 175, 55, 0.3);
   font-size: 0.9rem;
   color: #d4af37;
 }
 
-/* --- Mobil Görünüm --- */
+/* mobil */
 @media (max-width: 900px) {
   #hero {
     flex-direction: column;
@@ -187,11 +201,11 @@ footer {
   .world {
     left: 0;
     margin-right: 0;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 
   .coin {
-    width: 260px;
+    width: 280px;
   }
 
   .hero-content {
