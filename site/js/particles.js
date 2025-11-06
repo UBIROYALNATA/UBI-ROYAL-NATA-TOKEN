@@ -14,8 +14,7 @@ particlesJS("universe", {
     },
     "size": {
       "value": 2,
-      "random": true,
-      "anim": { "enable": false }
+      "random": true
     },
     "line_linked": { "enable": false },
     "move": {
