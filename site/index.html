@@ -4,56 +4,50 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>UBI ROYAL NATA — URN Token</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="site/css/style.css" />
 </head>
-
 <body>
-  <div id="stars"></div>
-
   <header>
-    <img src="images/UBI-ROYAL-NATA-logo.png" alt="UBI ROYAL NATA" class="logo" />
+    <div class="logo">
+      <img src="site/images/UBI-ROYAL-NATA-logo.png" alt="UBI Royal Nata Logo" />
+    </div>
     <nav>
-      <a href="#about">Hakkında</a>
-      <a href="#tokenomics">Tokenomik</a>
-      <a href="#roadmap">Yol Haritası</a>
-      <a href="#whitepaper">Whitepaper</a>
+      <ul>
+        <li><a href="#about">Hakkında</a></li>
+        <li><a href="#tokenomics">Tokenomik</a></li>
+        <li><a href="#roadmap">Yol Haritası</a></li>
+        <li><a href="#whitepaper">Whitepaper</a></li>
+      </ul>
     </nav>
-    <div class="lang-select">
+    <div class="lang-switch">
       <button>TR</button>
       <button>EN</button>
       <button>KR</button>
     </div>
   </header>
 
-  <section id="hero">
-    <div class="world">
-      <img src="site/images/dunya-alpha.png" alt="Dünya" class="coin" />
-    </div>
-    <div class="hero-content">
-      <h1>UBI ROYAL NATA<br>— URN Token</h1>
-      <p>Merkezi olmayan değerlerle özgürlük, adalet ve refah.</p>
-      <div class="hero-buttons">
-        <button class="outline">Satın Al / Takas</button>
-        <button class="outline">Beyaz Bülten</button>
+  <main>
+    <div class="content">
+      <div class="world">
+        <img src="site/images/dunya-alpha.png" alt="Dünya" class="coin" />
+      </div>
+      <div class="text">
+        <h1>UBI ROYAL NATA<br>— URN Token</h1>
+        <p>Merkezi olmayan değerlerle özgürlük, adalet ve refah.</p>
+        <div class="buttons">
+          <button class="outlined">Satın Al / Takas</button>
+          <button class="outlined">Beyaz Bülten</button>
+        </div>
       </div>
     </div>
-  </section>
+  </main>
 
   <footer>
-    © 2025 UBI ROYAL NATA — URN Token. Tüm hakları saklıdır.
+    <p>© 2025 UBI ROYAL NATA — URN Token. Tüm hakları saklıdır.</p>
   </footer>
 
-  <script>
-    const starsContainer = document.getElementById("stars");
-    for (let i = 0; i < 100; i++) {
-      const star = document.createElement("div");
-      star.classList.add("star");
-      star.style.top = Math.random() * 100 + "%";
-      star.style.left = Math.random() * 100 + "%";
-      star.style.animationDelay = Math.random() * 10 + "s";
-      starsContainer.appendChild(star);
-    }
-  </script>
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
 </body>
 </html>
