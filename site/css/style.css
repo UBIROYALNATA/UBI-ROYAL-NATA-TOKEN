@@ -96,16 +96,17 @@ header {
 .world {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 10;
   transform: translateY(-50%);
   z-index: 1;
 }
 
 .coin {
-  width: 400px;
-  height: 400px;
+  width: 38vw;
+  height: 38vw;
+  max-width: 520px;  
   border-radius: 50%;
-  animation: spin 50s linear infinite;
+  animation: spin 60s linear infinite;
   filter: drop-shadow(0 0 70px rgba(255, 215, 0, 0.55));
 }
 
