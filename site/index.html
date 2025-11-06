@@ -1,61 +1,151 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>UBI ROYAL NATA — URN Token</title>
-  <link rel="stylesheet" href="./site/css/style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UBI ROYAL NATA — URN Token</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:"Poppins",sans-serif;
+  background:#000;
+  color:#d4af37;
+  overflow:hidden;
+  min-height:100vh;
+}
+
+/* arka plan */
+#universe{
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  background:radial-gradient(ellipse at bottom,#0a0a0f 0%,#000 100%);
+  overflow:hidden;
+  z-index:0;
+}
+
+/* üst bar */
+header{
+  position:relative;
+  z-index:2;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 60px;
+  background:rgba(0,0,0,.7);
+  border-bottom:1px solid rgba(212,175,55,.3);
+}
+header img{height:70px}
+nav ul{list-style:none;display:flex;gap:40px}
+nav a{color:#fff;text-decoration:none;font-weight:500;transition:.3s}
+nav a:hover{color:#d4af37}
+.lang{display:flex;align-items:center;gap:8px}
+.lang a{color:#fff;text-decoration:none}
+.lang span{color:#d4af37}
+
+/* orta kısım */
+.hero{
+  position:relative;
+  z-index:2;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:60px;
+  padding:100px 20px;
+}
+.coin img{
+  width:300px;
+  animation:spin 40s linear infinite;
+  filter:drop-shadow(0 10px 30px rgba(212,175,55,.25));
+}
+@keyframes spin{to{transform:rotateY(360deg)}}
+.content{max-width:600px;text-align:left}
+.content h1{font-size:2.8rem;color:#f5d76e}
+.content h1 span{color:#fff}
+.content p{margin-top:20px;color:#ccc;line-height:1.6}
+.buttons{margin-top:40px;display:flex;gap:20px}
+.btn{
+  padding:12px 26px;border-radius:6px;font-weight:600;
+  text-decoration:none;transition:.3s;
+}
+.btn.gold{background:#d4af37;color:#000}
+.btn.white{background:#fff;color:#000}
+.btn:hover{opacity:.85;transform:scale(1.05)}
+
+/* alt bilgi */
+footer{
+  position:relative;z-index:2;
+  text-align:center;padding:30px 20px;
+  color:#aaa;font-size:.9rem;
+  border-top:1px solid rgba(212,175,55,.3);
+}
+footer a{color:#d4af37;text-decoration:none;margin:0 5px}
+</style>
 </head>
 
 <body>
-  <!-- 🌌 GALAKSİ ARKA PLAN -->
-  <div id="universe"></div>
+<div id="universe"></div>
 
-  <!-- ÜST MENÜ -->
-  <header>
-    <img src="https://raw.githubusercontent.com/UBIROYALNATA/UBI-ROYAL-NATA-TOKEN/main/site/images/UBI-ROYAL-NATA-logo.png"
-         alt="UBI ROYAL NATA Logo" />
-    <nav>
-      <ul>
-        <li><a href="#">Hakkında</a></li>
-        <li><a href="#">Tokenomik</a></li>
-        <li><a href="#">Yol Haritası</a></li>
-        <li><a href="#">Whitepaper</a></li>
-      </ul>
-    </nav>
-    <div class="lang">
-      <a href="#">TR</a><span>•</span>
-      <a href="#">EN</a><span>•</span>
-      <a href="#">FR</a>
+<header>
+  <img src="https://raw.githubusercontent.com/UBIROYALNATA/UBI-ROYAL-NATA-TOKEN/main/site/images/UBI-ROYAL-NATA-logo.png" alt="Logo">
+  <nav>
+    <ul>
+      <li><a href="#">Hakkında</a></li>
+      <li><a href="#">Tokenomik</a></li>
+      <li><a href="#">Yol Haritası</a></li>
+      <li><a href="#">Whitepaper</a></li>
+    </ul>
+  </nav>
+  <div class="lang">
+    <a href="#">TR</a><span>•</span>
+    <a href="#">EN</a><span>•</span>
+    <a href="#">FR</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="coin">
+      <img src="https://raw.githubusercontent.com/UBIROYALNATA/UBI-ROYAL-NATA-TOKEN/main/site/images/URN-coin.png" alt="Coin">
     </div>
-  </header>
-
-  <!-- ANA KISIM -->
-  <main>
-    <section class="hero">
-      <div class="coin">
-        <img src="https://raw.githubusercontent.com/UBIROYALNATA/UBI-ROYAL-NATA-TOKEN/main/site/images/URN-coin.png"
-             alt="URN Coin" />
+    <div class="content">
+      <h1>UBI ROYAL NATA — <span>URN Token</span></h1>
+      <p>Dijital varlıklarda adalet ve ekonomi için örnek proje.</p>
+      <div class="buttons">
+        <a href="#" class="btn gold">Satın Al / Takas</a>
+        <a href="#" class="btn white">Beyaz Bülten</a>
       </div>
-      <div class="content">
-        <h1>UBI ROYAL NATA — <span>URN Token</span></h1>
-        <p>Dijital varlıklarda adalet ve ekonomi için örnek proje.</p>
-        <div class="buttons">
-          <a href="#" class="btn gold">Satın Al / Takas</a>
-          <a href="#" class="btn white">Beyaz Bülten</a>
-        </div>
-      </div>
-    </section>
-  </main>
+    </div>
+  </section>
+</main>
 
-  <!-- ALT BİLGİ -->
-  <footer>
-    <p>© 2025 UBI ROYAL NATA — Dijital varlıklarda adalet ve ekonomi için örnek proje.</p>
-    <p><a href="#">İletişim</a> | <a href="#">Yasal</a></p>
-  </footer>
+<footer>
+  <p>© 2025 UBI ROYAL NATA — Dijital varlıklarda adalet ve ekonomi için örnek proje.</p>
+  <p><a href="#">İletişim</a> | <a href="#">Yasal</a></p>
+</footer>
 
-  <!-- JS -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script src="./site/js/particles.js"></script>
+<!-- yıldız alanı -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+particlesJS("universe", {
+  "particles": {
+    "number": {"value":200,"density":{"enable":true,"value_area":1800}},
+    "color":{"value":["#ffffff","#d4af37","#f2c94c"]},
+    "shape":{"type":"circle"},
+    "opacity":{"value":1,"random":true,"anim":{"enable":true,"speed":0.5,"opacity_min":0.2,"sync":false}},
+    "size":{"value":2,"random":true},
+    "line_linked":{"enable":false},
+    "move":{"enable":true,"speed":0.4,"direction":"none","random":true,"straight":false,"out_mode":"out","bounce":false}
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {"onhover": {"enable": true, "mode": "repulse"}, "resize": true},
+    "modes": {"repulse": {"distance": 80, "duration": 0.4}}
+  },
+  "retina_detect": true
+});
+</script>
 </body>
 </html>
