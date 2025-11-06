@@ -231,7 +231,7 @@ nav a:hover::after {
 /* Dönen Coin - Geliştirilmiş */
 .coin-container {
   position: absolute;
-  left: 8%;
+  left: 15%;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
