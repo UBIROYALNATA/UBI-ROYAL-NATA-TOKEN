@@ -1,211 +1,169 @@
-/* =========================================
-   UBI ROYAL NATA — URN Token Style
-   ========================================= */
+/* site/css/style.css
+   Minimal, sabit dünya, sol-ağırlıklı, yıldız arka planı
+*/
 
-/* GENEL RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root{
+  --gold: #f5d76e;
+  --gold-strong: #d4af37;
+  --bg-1: #0a0a0a;
 }
 
-body {
+/* Body */
+body{
   font-family: "Poppins", sans-serif;
-  background: radial-gradient(circle at center, #0a0a0a 0%, #000 100%);
-  color: #f5d76e;
+  background: radial-gradient(circle at center, var(--bg-1) 0%, #000 100%);
+  color: var(--gold);
   overflow-x: hidden;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
-/* =========================================
-   GALAKSİ ARKA PLAN (YILDIZLAR)
-   ========================================= */
-#stars {
+/* STARS (arka plan) */
+#stars{
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.star{
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(255, 245, 210, 0.9);
+  border-radius: 50%;
+  animation: drift 16s linear infinite;
+  will-change: transform, opacity;
+}
+@keyframes drift {
+  from { transform: translateY(0); opacity: 1; }
+  to   { transform: translateY(220px); opacity: 0.25; }
+}
+
+/* HEADER */
+.header{
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 0;
-}
-
-.star {
-  position: absolute;
-  width: 2px;
-  height: 2px;
-  background: white;
-  opacity: 0.7;
-  border-radius: 50%;
-  animation: drift 15s linear infinite;
-}
-
-@keyframes drift {
-  from {
-    transform: translateY(0);
-    opacity: 0.9;
-  }
-  to {
-    transform: translateY(100vh);
-    opacity: 0.2;
-  }
-}
-
-/* =========================================
-   ÜST MENÜ
-   ========================================= */
-header {
-  position: relative;
+  height: 84px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px 60px;
-  z-index: 5;
+  padding: 12px 48px;
+  z-index: 20;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(212,175,55,0.12);
 }
-
-.logo {
-  height: 50px;
+.header-left .logo{
+  height: 56px;
+  display: block;
 }
-
-.menu {
+.header-nav{
   display: flex;
-  gap: 40px;
+  gap: 28px;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
 }
-
-.menu a {
+.header-nav a{
+  color: var(--gold);
   text-decoration: none;
-  color: #f5d76e;
   font-weight: 500;
-  transition: color 0.3s;
+  padding: 6px 4px;
 }
-
-.menu a:hover {
-  color: #fff;
-}
-
-.lang-select {
-  display: flex;
-  gap: 8px;
-}
-
-.lang-select button {
+.header-nav a:hover{ color: #fff; }
+.header-right button{
   background: transparent;
-  border: 1px solid #f5d76e;
-  color: #f5d76e;
-  padding: 4px 10px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 6px 10px;
   border-radius: 4px;
+  margin-left: 8px;
   cursor: pointer;
-  font-weight: 500;
-  transition: all 0.3s;
 }
+.header-right button:hover{ background: var(--gold); color: #000; }
 
-.lang-select button:hover {
-  background: #f5d76e;
-  color: #000;
-}
-
-/* =========================================
-   ANA BÖLÜM
-   ========================================= */
-.hero {
+/* HERO */
+.hero{
+  position: relative;
+  height: calc(100vh - 84px);
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: calc(100vh - 120px);
-  padding: 0 10%;
+  justify-content: flex-start;
+  padding: 0 8% 0 6%;
+  gap: 40px;
+  z-index: 10;
+}
+
+/* Dünya (solda sabit, yazılara çakışmaz) */
+.world-wrap{
+  flex: 0 0 auto;
   position: relative;
-  z-index: 2;
+  left: -8%;
+}
+.coin{
+  display: block;
+  width: 420px;        /* sabit, taşmaması için */
+  max-width: 48vw;     /* küçük ekranlarda sığsın */
+  height: auto;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 40px rgba(245,215,110,0.35));
+  transform: translateZ(0);
 }
 
-.world {
-  flex: 0 0 45%;
-  display: flex;
-  justify-content: center;
+/* Yazı bloğu (sağa taşır) */
+.hero-content{
+  max-width: 560px;
+  padding-left: 20px;
 }
-
-.world img {
-  width: 430px;
-  filter: drop-shadow(0 0 40px rgba(245, 215, 110, 0.6));
+.hero-content h1{
+  font-size: 2.6rem;
+  margin-bottom: 6px;
+  color: var(--gold);
 }
-
-.hero-content {
-  flex: 0 0 55%;
-  padding-left: 40px;
+.hero-content h2{
+  font-size: 1.6rem;
+  color: var(--gold-strong);
+  margin-bottom: 12px;
 }
-
-.hero-content h1 {
-  font-size: 2.8rem;
-  font-weight: 600;
-  color: #f5d76e;
+.hero-content p{
+  color: #e9e0b8;
+  line-height: 1.5;
+  margin-bottom: 20px;
 }
-
-.hero-content h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #f5d76e;
-  margin-top: 10px;
-}
-
-.hero-content p {
-  color: #ddd;
-  font-size: 1.1rem;
-  margin-top: 20px;
-}
-
-.buttons {
-  margin-top: 30px;
-  display: flex;
-  gap: 20px;
-}
-
-button.outline {
+.hero-buttons{ display:flex; gap: 18px; }
+button.outline{
   background: transparent;
-  border: 1px solid #f5d76e;
-  color: #f5d76e;
-  font-weight: 500;
-  padding: 10px 25px;
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  padding: 10px 24px;
   border-radius: 6px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  font-weight:600;
 }
+button.outline:hover{ background: var(--gold); color:#000; }
 
-button.outline:hover {
-  background: #f5d76e;
-  color: #000;
-}
-
-/* =========================================
-   ALT KISIM (FOOTER)
-   ========================================= */
-footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
-  color: #c7b36b;
-  border-top: 1px solid rgba(245, 215, 110, 0.2);
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:18px;
+  color: #cfb66e;
+  font-size: .9rem;
+  border-top: 1px solid rgba(212,175,55,0.08);
   z-index: 5;
   background: transparent;
 }
 
-/* =========================================
-   RESPONSIVE TASARIM
-   ========================================= */
-@media (max-width: 900px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 5%;
-  }
-
-  .world {
-    order: -1;
-    margin-bottom: 30px;
-  }
-
-  .world img {
-    width: 280px;
-  }
-
-  .hero-content {
-    padding-left: 0;
-  }
+/* RESPONSIVE */
+@media (max-width: 900px){
+  .header{ padding: 10px 20px; height:72px; }
+  .hero{ flex-direction: column; padding: 24px 6% 0; gap: 20px; height: auto; }
+  .world-wrap{ left: 0; margin-bottom: 12px; }
+  .coin{ width: 260px; max-width: 70vw; }
+  .hero-content{ padding-left: 0; text-align:center; }
+  .header-nav{ display:none; } /* mobilde sade kalsın */
 }
