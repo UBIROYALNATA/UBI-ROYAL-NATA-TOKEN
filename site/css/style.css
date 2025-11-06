@@ -91,14 +91,14 @@ header {
 .world {
   position: absolute;
   top: 50%;
-  left: 100;
+  left: 4;
   transform: translateY(-50%);
   z-index: 1;
 }
 
 .coin {
-  width: 60px;
-  height: 60px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   animation: spin 60s linear infinite;
   filter: drop-shadow(0 0 70px rgba(255, 215, 0, 0.5));
