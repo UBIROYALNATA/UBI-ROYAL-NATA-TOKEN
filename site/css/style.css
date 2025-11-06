@@ -1,3 +1,8 @@
+/* ==============================
+   UBI ROYAL NATA — URN TOKEN
+   Nihai düzen - 2025
+   ============================== */
+
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +16,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Galaksi arka planı */
+/* --- Galaksi Yıldız Arka Plan --- */
 #stars {
   position: fixed;
   top: 0;
@@ -26,45 +31,58 @@ body {
   position: absolute;
   width: 2px;
   height: 2px;
-  background: rgba(255, 240, 180, 0.8);
+  background: rgba(255, 240, 200, 0.8);
   border-radius: 50%;
   animation: moveStar 18s linear infinite;
 }
 
 @keyframes moveStar {
-  from { transform: translateY(0px); opacity: 1; }
-  to { transform: translateY(200px); opacity: 0.3; }
+  from {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(200px);
+    opacity: 0.3;
+  }
 }
 
-/* Header */
+/* --- Üst Menü --- */
 header {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 50px;
   z-index: 10;
   border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+  backdrop-filter: blur(8px);
 }
 
 .logo {
   height: 65px;
+  width: auto;
   filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.3));
 }
 
+/* Menü */
 nav a {
-  margin: 0 15px;
+  margin: 0 12px;
   color: #d4af37;
   text-decoration: none;
   font-weight: 500;
   transition: 0.3s;
 }
 
-nav a:hover { color: #fff; }
+nav a:hover {
+  color: #fff;
+}
 
+/* Dil Seçimi */
 .lang-select button {
   background: transparent;
   border: 1px solid #d4af37;
@@ -81,34 +99,38 @@ nav a:hover { color: #fff; }
   color: #000;
 }
 
-/* Hero */
+/* --- Ana Sayfa --- */
 #hero {
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding-left: 8%;
-  z-index: 1;
+  justify-content: center;
+  padding: 120px 8% 0;
   position: relative;
+  z-index: 1;
 }
 
+/* Dünya Görseli */
 .world {
+  flex: 0 0 auto;
   position: relative;
-  left: 0;
-  flex-shrink: 0;
+  left: -5%; /* biraz daha sola alındı */
+  margin-right: 5%;
 }
 
 .coin {
-  width: 400px;
+  width: 420px;
   height: auto;
   border-radius: 50%;
   object-fit: contain;
-  filter: drop-shadow(0 0 50px rgba(255, 215, 0, 0.4));
+  filter: drop-shadow(0 0 40px rgba(255, 215, 0, 0.4));
+  animation: none; /* sabit */
 }
 
+/* Yazı Alanı */
 .hero-content {
   max-width: 600px;
-  margin-left: 70px;
+  text-align: left;
 }
 
 .hero-content h1 {
@@ -145,10 +167,34 @@ nav a:hover { color: #fff; }
   color: #000;
 }
 
+/* --- Alt Bilgi --- */
 footer {
   text-align: center;
   padding: 20px;
   border-top: 1px solid rgba(212, 175, 55, 0.3);
-  color: #d4af37;
   font-size: 0.9rem;
+  color: #d4af37;
+}
+
+/* --- Mobil Görünüm --- */
+@media (max-width: 900px) {
+  #hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 150px;
+  }
+
+  .world {
+    left: 0;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .coin {
+    width: 260px;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
 }
