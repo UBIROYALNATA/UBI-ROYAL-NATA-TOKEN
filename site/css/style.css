@@ -24,7 +24,7 @@ body {
   line-height: 1.6;
 }
 
-/* Arka plan */
+/* Arka plan (canvas) */
 #bg {
   position: fixed;
   top: 0;
@@ -212,7 +212,7 @@ nav a:hover::after {
 /* Coin */
 .coin-container {
   position: absolute;
-  left: 10%;
+  left: 8%;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
@@ -225,7 +225,6 @@ nav a:hover::after {
     drop-shadow(0 0 25px rgba(212,175,55,0.7))
     drop-shadow(0 0 50px rgba(212,175,55,0.4));
   transition: all 0.3s ease;
-  transform: scaleX(-1); /* Görseli düz çevirir */
 }
 
 /* Bölümler */
