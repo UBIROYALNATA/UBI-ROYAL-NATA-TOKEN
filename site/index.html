@@ -4,18 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>UBI ROYAL NATA — URN Token</title>
-
-  <!-- CSS doğru yolu -->
   <link rel="stylesheet" href="site/css/style.css" />
-
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 
 <body>
+  <!-- Yıldızlı galaksi efekti -->
   <div id="stars"></div>
 
+  <!-- Üst Menü -->
   <header>
-    <img src="site/images/UBI-ROYAL-NATA-logo.png" alt="UBI ROYAL NATA" class="logo" />
+    <div class="logo">
+      <img src="site/images/UBI-ROYAL-NATA-logo.png" alt="UBI ROYAL NATA Logo" />
+    </div>
     <nav>
       <a href="#about">Hakkında</a>
       <a href="#tokenomics">Tokenomik</a>
@@ -29,6 +30,7 @@
     </div>
   </header>
 
+  <!-- Ana Bölüm -->
   <section id="hero">
     <div class="world">
       <img src="site/images/dunya-alpha.png" alt="Dünya Görseli" class="coin" />
@@ -36,27 +38,29 @@
 
     <div class="hero-content">
       <h1>UBI ROYAL NATA</h1>
-      <p>URN Token — dijital ekonomide altın standart.</p>
+      <h2>— URN Token</h2>
+      <p>Merkezi olmayan değerlerle özgürlük, adalet ve refah.</p>
       <div class="hero-buttons">
-        <button class="outline">Satın Al</button>
-        <button class="outline">Whitepaper</button>
+        <button class="outline">Satın Al / Takas</button>
+        <button class="outline">Beyaz Bülten</button>
       </div>
     </div>
   </section>
 
+  <!-- Alt Bilgi -->
   <footer>
     © 2025 UBI ROYAL NATA — URN Token. Tüm hakları saklıdır.
   </footer>
 
   <script>
-    // yıldız efekti
+    // galaksi efektinde yıldız hareketi
     const starsContainer = document.getElementById("stars");
     for (let i = 0; i < 120; i++) {
       const star = document.createElement("div");
       star.classList.add("star");
       star.style.top = Math.random() * 100 + "%";
       star.style.left = Math.random() * 100 + "%";
-      star.style.animationDelay = Math.random() * 15 + "s";
+      star.style.animationDelay = Math.random() * 10 + "s";
       starsContainer.appendChild(star);
     }
   </script>
