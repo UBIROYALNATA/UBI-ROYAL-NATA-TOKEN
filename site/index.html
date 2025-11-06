@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="UBI ROYAL NATA — URN Token resmi tanıtım sayfası" />
   <title>UBI ROYAL NATA — URN Token</title>
+
+  <!-- CSS doğru yolu -->
   <link rel="stylesheet" href="site/css/style.css" />
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-  <!-- Arka plan yıldız animasyonu -->
   <div id="stars"></div>
 
-  <!-- ÜST MENÜ -->
   <header>
     <img src="site/images/UBI-ROYAL-NATA-logo.png" alt="UBI ROYAL NATA" class="logo" />
     <nav>
@@ -29,7 +29,6 @@
     </div>
   </header>
 
-  <!-- ANA SAYFA -->
   <section id="hero">
     <div class="world">
       <img src="site/images/dunya-alpha.png" alt="Dünya Görseli" class="coin" />
@@ -45,20 +44,19 @@
     </div>
   </section>
 
-  <!-- ALT BİLGİ -->
   <footer>
     © 2025 UBI ROYAL NATA — URN Token. Tüm hakları saklıdır.
   </footer>
 
-  <!-- Galaksi efektleri -->
   <script>
+    // yıldız efekti
     const starsContainer = document.getElementById("stars");
     for (let i = 0; i < 120; i++) {
       const star = document.createElement("div");
       star.classList.add("star");
       star.style.top = Math.random() * 100 + "%";
       star.style.left = Math.random() * 100 + "%";
-      star.style.animationDelay = Math.random() * 20 + "s";
+      star.style.animationDelay = Math.random() * 15 + "s";
       starsContainer.appendChild(star);
     }
   </script>
