@@ -1,9 +1,8 @@
-/* ==============================
-   UBI ROYAL NATA — URN Token
-   Ana Stil Dosyası
-   ============================== */
+/* =========================================
+   UBI ROYAL NATA — URN Token Style
+   ========================================= */
 
-/* Temel yapı */
+/* GENEL RESET */
 * {
   margin: 0;
   padding: 0;
@@ -12,289 +11,201 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: #000;
-  color: #d4af37;
+  background: radial-gradient(circle at center, #0a0a0a 0%, #000 100%);
+  color: #f5d76e;
   overflow-x: hidden;
 }
 
-/* Arka plan animasyonu (canvas) */
-#bg {
+/* =========================================
+   GALAKSİ ARKA PLAN (YILDIZLAR)
+   ========================================= */
+#stars {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
-  background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
+  overflow: hidden;
+  z-index: 0;
 }
 
-/* Header */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 50px;
-  z-index: 10;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
-  backdrop-filter: blur(8px);
-  animation: fadeInDown 1s ease;
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  opacity: 0.7;
+  border-radius: 50%;
+  animation: drift 15s linear infinite;
 }
 
-/* Logo */
-.logo {
-  height: 80px;
-  width: auto;
-  margin: 10px 20px;
-  opacity: 0;
-  transform: scale(0.9);
-  animation: logoFadeIn 1.5s ease forwards;
-  transition: transform 0.4s ease, filter 0.4s ease;
-  filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.3));
-}
-
-.logo:hover {
-  transform: scale(1.08);
-  filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.7));
-}
-
-/* Küçük ekran uyumu */
-@media (max-width: 768px) {
-  .logo {
-    height: 60px;
+@keyframes drift {
+  from {
+    transform: translateY(0);
+    opacity: 0.9;
+  }
+  to {
+    transform: translateY(100vh);
+    opacity: 0.2;
   }
 }
 
-nav a {
-  margin: 0 12px;
-  color: #d4af37;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
+/* =========================================
+   ÜST MENÜ
+   ========================================= */
+header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  z-index: 5;
 }
 
-nav a:hover {
+.logo {
+  height: 50px;
+}
+
+.menu {
+  display: flex;
+  gap: 40px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #f5d76e;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
   color: #fff;
+}
+
+.lang-select {
+  display: flex;
+  gap: 8px;
 }
 
 .lang-select button {
   background: transparent;
-  border: 1px solid #d4af37;
-  color: #d4af37;
-  margin-left: 6px;
-  padding: 4px 8px;
+  border: 1px solid #f5d76e;
+  color: #f5d76e;
+  padding: 4px 10px;
+  border-radius: 4px;
   cursor: pointer;
-  border-radius: 3px;
-  transition: 0.3s;
+  font-weight: 500;
+  transition: all 0.3s;
 }
 
 .lang-select button:hover {
-  background: #d4af37;
+  background: #f5d76e;
   color: #000;
 }
 
-/* Hero Section */
-#hero {
-  height: 100vh;
+/* =========================================
+   ANA BÖLÜM
+   ========================================= */
+.hero {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-  padding: 0 20px;
+  justify-content: center;
+  height: calc(100vh - 120px);
+  padding: 0 10%;
+  position: relative;
+  z-index: 2;
 }
 
-#hero h1 {
-  font-size: 3rem;
-  letter-spacing: 2px;
-  animation: fadeInDown 1s ease;
-}
-
-#hero p {
-  font-size: 1.2rem;
-  margin-top: 15px;
-  max-width: 600px;
-  animation: fadeIn 1.5s ease;
-}
-
-.hero-buttons {
-  margin-top: 25px;
-}
-
-.hero-buttons button {
-  background: #d4af37;
-  color: #000;
-  border: none;
-  padding: 12px 24px;
-  margin: 10px;
-  border-radius: 5px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.hero-buttons button:hover {
-  background: #fff;
-  color: #000;
-}
-
-/* Bölümler */
-section {
-  padding: 100px 20px;
-  max-width: 900px;
-  margin: auto;
-  text-align: center;
-  animation: fadeInUp 1s ease;
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #f2c94c;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  margin: 10px 0;
-  font-size: 1.1rem;
-}
-
-/* Roadmap */
-.timeline {
+.world {
+  flex: 0 0 45%;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
 }
 
-.phase {
-  background: rgba(255, 215, 0, 0.05);
-  border: 1px solid rgba(212, 175, 55, 0.4);
-  margin: 10px;
-  padding: 20px;
-  border-radius: 8px;
-  width: 200px;
-  transition: 0.3s;
+.world img {
+  width: 430px;
+  filter: drop-shadow(0 0 40px rgba(245, 215, 110, 0.6));
 }
 
-.phase:hover {
-  background: rgba(212, 175, 55, 0.15);
-  transform: scale(1.05);
+.hero-content {
+  flex: 0 0 55%;
+  padding-left: 40px;
 }
 
-/* Footer */
+.hero-content h1 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #f5d76e;
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #f5d76e;
+  margin-top: 10px;
+}
+
+.hero-content p {
+  color: #ddd;
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+button.outline {
+  background: transparent;
+  border: 1px solid #f5d76e;
+  color: #f5d76e;
+  font-weight: 500;
+  padding: 10px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button.outline:hover {
+  background: #f5d76e;
+  color: #000;
+}
+
+/* =========================================
+   ALT KISIM (FOOTER)
+   ========================================= */
 footer {
   text-align: center;
-  padding: 40px;
-  border-top: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 20px;
   font-size: 0.9rem;
-}
-
-/* ==============================
-   Dönen Sikke + Işık Efekti
-   ============================== */
-.coin-wrapper {
-  position: fixed;
-  left: 5%;
-  top: 50%;
-  transform: translateY(-50%);
+  color: #c7b36b;
+  border-top: 1px solid rgba(245, 215, 110, 0.2);
   z-index: 5;
+  background: transparent;
 }
 
-.coin {
-  width: 140px;
-  height: 140px;
-  animation: rotateCoin 8s linear infinite;
-  filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.6));
-  transition: transform 0.3s ease;
-}
-
-.coin:hover {
-  transform: scale(1.1);
-}
-
-/* ışık halkası */
-.coin-glow {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 220px;
-  height: 220px;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 215, 0, 0.25) 0%, transparent 70%);
-  animation: glowPulse 4s ease-in-out infinite;
-  filter: blur(20px);
-  z-index: -1;
-}
-
-/* mobil uyum */
-@media (max-width: 768px) {
-  .coin {
-    width: 90px;
-    height: 90px;
-    animation-duration: 12s;
+/* =========================================
+   RESPONSIVE TASARIM
+   ========================================= */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 5%;
   }
 
-  .coin-glow {
-    width: 140px;
-    height: 140px;
+  .world {
+    order: -1;
+    margin-bottom: 30px;
   }
-}
 
-/* Animasyonlar */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
+  .world img {
+    width: 280px;
+  }
 
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes logoFadeIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes rotateCoin {
-  from {
-    transform: rotateY(0deg);
-  }
-  to {
-    transform: rotateY(360deg);
-  }
-}
-
-@keyframes glowPulse {
-  0% {
-    opacity: 0.4;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  50% {
-    opacity: 0.8;
-    transform: translate(-50%, -50%) scale(1.15);
-  }
-  100% {
-    opacity: 0.4;
-    transform: translate(-50%, -50%) scale(1);
+  .hero-content {
+    padding-left: 0;
   }
 }
