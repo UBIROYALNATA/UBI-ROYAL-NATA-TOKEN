@@ -24,7 +24,7 @@ body {
   line-height: 1.6;
 }
 
-/* Arka plan (canvas) */
+/* Arka plan */
 #bg {
   position: fixed;
   top: 0;
@@ -143,17 +143,33 @@ nav a:hover::after {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 80px; /* coin ile metin arası */
   position: relative;
-  text-align: center;
-  padding: 0 20px;
+  padding: 0 40px;
+  text-align: left;
 }
 
+/* Coin */
+.coin-container {
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.coin {
+  width: 320px;
+  height: auto;
+  filter: 
+    drop-shadow(0 0 25px rgba(212,175,55,0.7))
+    drop-shadow(0 0 50px rgba(212,175,55,0.4));
+  transition: all 0.3s ease;
+}
+
+/* Hero metin kısmı */
 .hero-content {
   max-width: 700px;
+  flex: 0 0 auto;
   position: relative;
   z-index: 2;
-  margin-left: 220px;
-  text-align: left;
 }
 
 #hero h1 {
@@ -186,7 +202,7 @@ nav a:hover::after {
 .hero-buttons {
   margin-top: 40px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 20px;
   flex-wrap: wrap;
 }
@@ -209,24 +225,6 @@ nav a:hover::after {
 .hero-buttons button:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
-}
-
-/* Coin */
-.coin-container {
-  position: absolute;
-  left: 8%;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-}
-
-.coin {
-  width: 320px;
-  height: auto;
-  filter: 
-    drop-shadow(0 0 25px rgba(212,175,55,0.7))
-    drop-shadow(0 0 50px rgba(212,175,55,0.4));
-  transition: all 0.3s ease;
 }
 
 /* Bölümler */
