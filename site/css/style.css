@@ -24,7 +24,7 @@ body {
   line-height: 1.6;
 }
 
-/* Arka plan (canvas) - Geliştirilmiş */
+/* Arka plan */
 #bg {
   position: fixed;
   top: 0;
@@ -38,7 +38,7 @@ body {
     radial-gradient(circle at 40% 40%, rgba(26, 26, 26, 0.8) 0%, var(--black) 100%);
 }
 
-/* Partikül Efekti için */
+/* Partikül Efekti */
 .particles {
   position: fixed;
   top: 0;
@@ -49,7 +49,7 @@ body {
   pointer-events: none;
 }
 
-/* Header - Geliştirilmiş */
+/* Header */
 header {
   position: fixed;
   top: 0;
@@ -137,7 +137,7 @@ nav a:hover::after {
   transform: translateY(-2px);
 }
 
-/* HERO Bölümü - Geliştirilmiş */
+/* HERO Bölümü */
 #hero {
   height: 100vh;
   display: flex;
@@ -204,34 +204,15 @@ nav a:hover::after {
   min-width: 180px;
 }
 
-.hero-buttons button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-  transition: left 0.5s;
-}
-
-.hero-buttons button:hover::before {
-  left: 100%;
-}
-
 .hero-buttons button:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
 }
 
-.hero-buttons button:active {
-  transform: translateY(-1px);
-}
-
-/* Dönen Coin - Geliştirilmiş */
+/* Coin */
 .coin-container {
   position: absolute;
-  left: 15%;
+  left: 10%;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
@@ -240,27 +221,14 @@ nav a:hover::after {
 .coin {
   width: 320px;
   height: auto;
-  animation: spin 12s linear infinite;
   filter: 
-    drop-shadow(0 0 20px rgba(212,175,55,0.6))
-    drop-shadow(0 0 40px rgba(212,175,55,0.3));
+    drop-shadow(0 0 25px rgba(212,175,55,0.7))
+    drop-shadow(0 0 50px rgba(212,175,55,0.4));
   transition: all 0.3s ease;
   transform: scaleX(-1); /* Görseli düz çevirir */
 }
 
-.coin:hover {
-  filter: 
-    drop-shadow(0 0 30px rgba(212,175,55,0.8))
-    drop-shadow(0 0 60px rgba(212,175,55,0.4));
-  animation-duration: 8s;
-}
-
-@keyframes spin {
-  from { transform: rotateY(0deg); }
-  to { transform: rotateY(360deg); }
-}
-
-/* Bölümler - Geliştirilmiş */
+/* Bölümler */
 section {
   padding: 120px 20px;
   max-width: 1100px;
@@ -293,11 +261,18 @@ h2::after {
   background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
 
-.section-description {
-  font-size: 1.2rem;
-  color: var(--text-light);
-  max-width: 600px;
-  margin: 0 auto 30px;
+/* Animasyonlar */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* geri kalan tüm kod aynı kalacak */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
