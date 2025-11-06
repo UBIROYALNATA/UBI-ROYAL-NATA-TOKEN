@@ -49,19 +49,6 @@ body {
   pointer-events: none;
 }
 
-.particle {
-  position: absolute;
-  background: var(--gold);
-  border-radius: 50%;
-  opacity: 0.3;
-  animation: float 6s infinite ease-in-out;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-20px) rotate(180deg); }
-}
-
 /* Header - Geliştirilmiş */
 header {
   position: fixed;
@@ -309,7 +296,7 @@ h2::after {
   font-size: 1.2rem;
   color: var(--text-light);
   max-width: 600px;
-  margin: 0 auto;
+  margin: 0 auto 30px;
 }
 
 /* Tokenomics Grid */
@@ -484,6 +471,7 @@ footer {
   color: var(--gold);
   font-size: 1.5rem;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .social-links a:hover {
@@ -610,5 +598,10 @@ footer {
   
   h2 {
     font-size: 2rem;
+  }
+  
+  .footer-links {
+    flex-direction: column;
+    gap: 15px;
   }
 }
