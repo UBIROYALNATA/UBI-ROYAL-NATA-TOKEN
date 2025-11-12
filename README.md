@@ -32,7 +32,7 @@ It powers the foundation for the **Digital Sovereignty Economy**, where users ho
 | **Name** | UBI ROYAL NATA |
 | **Symbol** | URN |
 | **Network** | BNB Smart Chain (BEP-20) |
-| **Total Supply** | 1,000,000,000 URN |
+| **Total Supply** | 10,000,000,000 URN |
 | **Decimals** | 18 |
 | **Contract** | [`0x29fCeD645Cc4D63aF13d0Cc939bCe44FfD2EbAa7`](https://bscscan.com/token/0x29fced645cc4d63af13d0cc939bce44ffd2ebaa7) |
 
