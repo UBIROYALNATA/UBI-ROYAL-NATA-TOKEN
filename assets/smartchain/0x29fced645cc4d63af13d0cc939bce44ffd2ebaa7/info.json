@@ -1,9 +1,9 @@
 {
   "name": "UBI ROYAL NATA",
   "symbol": "URN",
-  "type": "BEP20",
+  "type": "token",
   "decimals": 18,
-  "description": "UBI ROYAL NATA (URN) is a decentralized asset designed to bridge digital identity, universal basic income and gold-backed value systems under the URN ecosystem.",
+  "description": "UBI ROYAL NATA (URN) is a decentralized digital asset bridging identity, basic income, and gold-backed value under the URN ecosystem.",
   "website": "https://ubiroyalnata.github.io/UBI-ROYAL-NATA-TOKEN/",
   "explorer": "https://bscscan.com/token/0x29fced645cc4d63af13d0cc939bce44ffd2ebaa7",
   "status": "active",
