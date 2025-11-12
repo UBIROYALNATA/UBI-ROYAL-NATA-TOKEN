@@ -1,0 +1,19 @@
+{
+  "name": "UBI ROYAL NATA Token List",
+  "timestamp": "2025-11-12T00:00:00+00:00",
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  },
+  "tokens": [
+    {
+      "chainId": 56,
+      "address": "0x29fCeD645Cc4D63aF13d0Cc939bCe44FfD2EbaA7",
+      "name": "UBI ROYAL NATA",
+      "symbol": "URN",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/UBIROYALNATA/UBI-ROYAL-NATA-TOKEN/main/assets/smartchain/0x29fced645cc4d63af13d0cc939bce44ffd2ebaa7/logo.png"
+    }
+  ]
+}
